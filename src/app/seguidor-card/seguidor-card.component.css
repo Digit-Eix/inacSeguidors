@@ -122,6 +122,7 @@ button.next {
     opacity: 0.6;
     position: relative;
     z-index: 10;
+    margin-top:-60%;
 }
 
 :host /deep/ .mat-progress-spinner circle,
@@ -157,4 +158,46 @@ button.next {
 .weather-info-sunset .hour {
     position: absolute;
     margin-top: -20px;
+}
+
+/*Css del div d'inclinació*/
+.imatge-inclinada-1{
+  padding-top:5%;
+}
+
+.imatge-inclinada-2{
+  margin-top: -1%;
+  margin-bottom: -50%;
+}
+
+.contenidor-orientacio{
+  min-height: 325px;
+  padding-top:10%;
+}
+.contenidor-inclinacio{
+  min-height: 325px;
+  padding-top:10%;
+}
+
+@media only screen and (max-width: 991px) {
+  .seguidor-inclinacio .number {
+    font-size: 40px;
+    font-weight: bolder;
+    border-radius: 50%;
+    border: 10px solid;
+    padding: 0.5em;
+    color: #ffa828;
+    opacity: 0.6;
+    position: relative;
+    z-index: 10;
+    margin-top:-40%;
+  }
+  .contenidor-orientacio{
+  min-height: 250px;
+  padding-top:10%;
+}
+.contenidor-inclinacio{
+  min-height: 250px;
+  padding-top:10%;
+}
 }

@@ -13,13 +13,15 @@ import { CalendarCardComponent } from './calendar-card/calendar-card.component';
 import { DadesGeneralsComponent } from './dades-generals/dades-generals.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgxGaugeModule } from 'ngx-gauge';
+import { SeguidorOrientacioComponent } from './seguidor-orientacio/seguidor-orientacio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeguidorCardComponent,
     CalendarCardComponent,
-    DadesGeneralsComponent
+    DadesGeneralsComponent,
+    SeguidorOrientacioComponent
   ],
   imports: [
     BrowserModule,

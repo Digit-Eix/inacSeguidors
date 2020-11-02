@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\calendar-card",
+    "\\src\\app\\dades-generals",
+    "\\src\\app\\seguidor-card",
+    "\\src\\app\\seguidor-orientacio",
+    "\\src\\assets",
+    "\\src\\assets\\img",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\styles.css",
+  "PreviewInSolutionExplorer": false
+}
