@@ -29,8 +29,8 @@
                         <div class="row" style="display:flex;justify-content: space-around;">
                             <div class="col-6" style="min-width: 300px;">
                                 <h4 class="text-center">RD Orientación</h4>
-                                <div class="contenidor-orientacio card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
-                                    <!--<ngx-gauge [type]="gaugeType" [value]="seguidorField.seguidors[this.segNum].rdOrientacio" [thick]="15" [label]="gaugeLabel" [append]="gaugeAppendText">
+                                <div class="card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
+                                 <!--<ngx-gauge [type]="gaugeType" [value]="seguidorField.seguidors[this.segNum].rdOrientacio" [thick]="15" [label]="gaugeLabel" [append]="gaugeAppendText">
                                     </ngx-gauge>-->
                                     <app-seguidor-orientacio [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio> 
                                 </div>
@@ -40,10 +40,10 @@
                             </div>
                             <div class="col-6" style="min-width: 300px;">
                                 <h4 class="text-center">RD Inclicación</h4>
-                                <div class="contenidor-inclinacio text-center card rounded border border-warning shadow">
-                                    <img class="imatge-inclinada-1 mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
+                                <div class="text-center card rounded border border-warning shadow">
+                                    <img class="mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
                                                margin-top: 5%">
-                                    <mat-grid-list cols="1" class="imatge-inclinada-2" style="background-position: center top;
+                                    <mat-grid-list cols="1" style="margin-top:-10%;background-position: center;
                                     background-repeat: no-repeat; background-size:auto; position: relative; z-index: 1000;
                                     background-image: url('/assets/img/footSeguidor.png');">
                                         <mat-grid-tile class="seguidor-inclinacio">
