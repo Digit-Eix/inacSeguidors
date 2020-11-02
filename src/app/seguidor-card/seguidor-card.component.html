@@ -29,14 +29,9 @@
                         <div class="row" style="display:flex;justify-content: space-around;">
                             <div class="col-6" style="min-width: 300px;">
                                 <h4 class="text-center">RD Orientación</h4>
-                                <div class="card rounded border border-warning shadow m-auto" style="margin-right: 5px; border-radius: 1em;">
-                                    <mat-grid-list cols="1">
-                                        <mat-grid-tile rowHeight="50px" class="seguidor-orientacio">
-                                            <div class="number">{{seguidorField.seguidors[segNum].rdOrientacio|number:'1.0-0'}}</div>
-                                        </mat-grid-tile>
-                                    </mat-grid-list>
-                                    <mat-progress-spinner class="orientation-spinner" diameter="200" strokeWidth="30" value="{{seguidorField.seguidors[segNum].rdOrientacio / 3.6}}">
-                                    </mat-progress-spinner>
+                                <div class="card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
+                                    <ngx-gauge [type]="gaugeType" [value]="seguidorField.seguidors[this.segNum].rdOrientacio" [thick]="15" [label]="gaugeLabel" [append]="gaugeAppendText">
+                                    </ngx-gauge>
                                 </div>
                                 <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow">
                                     {{seguidorField.seguidors[segNum].spOrientacioMan}}

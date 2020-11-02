@@ -22,11 +22,18 @@ export class SeguidorCardComponent implements OnInit {
 "vent"  : ":="DB_HMI_inter".vent:"
 } */
 temp: Seguidor = new Seguidor();
-//rData: any = this.getSeguidorData();
+// rData: any = this.getSeguidorData();
 rData: any = {};
 segNum: number;
-//seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
+// seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
   seguidorDataUrl = './assets/seguidorData.json';
+  // Gauge
+    gaugeType = 'arch';
+    //gaugeValue = this.seguidorField.seguidors[this.segNum].rdOrientacio;
+    //gaugeValue = 0;
+    gaugeLabel = 'Orientación';
+    gaugeAppendText = '';
+
   constructor(private _http: HttpClient) {
    }
 

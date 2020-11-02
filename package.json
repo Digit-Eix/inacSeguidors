@@ -12,15 +12,21 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.11",
+    "@angular/cdk": "^10.2.6",
     "@angular/common": "~9.1.11",
     "@angular/compiler": "~9.1.11",
     "@angular/core": "~9.1.11",
     "@angular/forms": "~9.1.11",
+    "@angular/material": "^10.2.6",
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "@swimlane/ngx-charts": "^16.0.0",
+    "ngx-gauge": "^1.1.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "weathericons": "^2.1.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

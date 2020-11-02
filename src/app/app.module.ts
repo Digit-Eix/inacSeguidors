@@ -12,6 +12,7 @@ import { SeguidorCardComponent } from './seguidor-card/seguidor-card.component';
 import { CalendarCardComponent } from './calendar-card/calendar-card.component';
 import { DadesGeneralsComponent } from './dades-generals/dades-generals.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgxGaugeModule } from 'ngx-gauge';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxGaugeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
