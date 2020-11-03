@@ -14,13 +14,13 @@ export class SeguidorOrientacioComponent implements OnInit {
     gaugeSize = 250;
     gaugeMinValue = 5;
     gaugeMaxValue = 355;
-    gaugeStyle = "round";
+    gaugeStyle = 'round';
     gaugeThicknes = 15;
-    //gaugeLabel = 'Orientación';
+    // gaugeLabel = 'Orientación';
     gaugeLabel = '';
     gaugeAppendText = '';
     gaugeAnim = true;
-    color = "#ffa828";
+    color = '#ffa828';
   constructor() { }
 
   ngOnInit(): void {

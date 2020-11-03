@@ -180,24 +180,24 @@ button.next {
 }
 
 @media only screen and (max-width: 991px) {
-  .seguidor-inclinacio .number {
-    font-size: 40px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 10px solid;
-    padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
-    position: relative;
-    z-index: 10;
-    margin-top:-40%;
+    .seguidor-inclinacio .number {
+        font-size: 40px;
+        font-weight: bolder;
+        border-radius: 50%;
+        border: 10px solid;
+        padding: 0.5em;
+        color: #ffa828;
+        opacity: 0.6;
+        position: relative;
+        z-index: 10;
+        margin-top:-40%;
   }
   .contenidor-orientacio{
-  min-height: 250px;
-  padding-top:10%;
-}
-.contenidor-inclinacio{
-  min-height: 250px;
-  padding-top:10%;
-}
+        min-height: 250px;
+        padding-top:10%;
+  }
+  .contenidor-inclinacio{
+        min-height: 250px;
+        padding-top:10%;
+   }
 }
