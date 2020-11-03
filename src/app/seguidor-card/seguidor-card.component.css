@@ -179,6 +179,16 @@ button.next {
   padding-top:10%;
 }
 
+.seguidor-orientacio-mobil{
+  display: none;
+  visibility: hidden;
+}
+
+.seguidor-orientacio-web{
+  display: inline;
+  visibility: visible;
+}
+
 @media only screen and (max-width: 991px) {
   .seguidor-inclinacio .number {
     font-size: 40px;
@@ -192,12 +202,86 @@ button.next {
     z-index: 10;
     margin-top:-40%;
   }
+
+  .contenidor-petit{
+    max-width:30%;
+  }
   .contenidor-orientacio{
-  min-height: 250px;
+  min-height: 125px;
   padding-top:10%;
 }
 .contenidor-inclinacio{
-  min-height: 250px;
+  min-height: 125px;
   padding-top:10%;
 }
+.seguidor-orientacio-mobil{
+  visibility: visible;
+  display: inline;
+}
+
+.seguidor-orientacio-web{
+  visibility: hidden;
+  display: none;
+}
+
+.seguidor-inclinacio .number {
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 50%;
+    border: 5px solid;
+    padding: 0.5em;
+    color: #ffa828;
+    opacity: 0.6;
+    position: relative;
+    z-index: 10;
+    margin-top:-0%;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.titol-mobil{
+  font-size: 20px;
+}
+
+.aParent {
+    float: left;
+    clear: none;
+    margin-left: 0px!important;
+    margin-top: 0px!important;
+    margin-right: 0px!important;
+    position: relative;
+    text-align:center;
+}
+
+.aSon{
+  margin-left:30%;
+}
+
+.no-margin{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+
+.posicionament1{
+  float: left;
+  clear: none;
+}
+
+.amplada-h3{
+  width:50%;
+  float: left;
+}
+
+.amplada-mobil{
+  margin-top:20px!important;
+  min-width:100%!important;
+}
+
+.marge-mobil{
+  margin-left:8.33%!important;
+}
+
 }
