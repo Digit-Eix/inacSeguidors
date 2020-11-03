@@ -80,5 +80,6 @@ export class Seguidor {
     limitInclinacioMaxim: number;
     start: number;
     stop: number;
+    alarmes: string;
     constructor() { }
 }

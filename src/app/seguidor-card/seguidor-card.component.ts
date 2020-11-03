@@ -65,7 +65,8 @@ export class SeguidorCardComponent implements OnInit {
          ['limitInclinacioMaxim', 'Limit_Inclinacio_Maxim'],
          ['start', 'Start'],
          ['stop', 'Stop'],
-         ['status', 'status']
+         ['status', 'status'],
+         ['alarmes', 'Alarmes']
       ];
         vars.forEach(v => {
           temp[v[0]] = this.rData[`SS${i}_${v[1]}`];
