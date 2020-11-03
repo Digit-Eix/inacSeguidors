@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\calendar-card",
-    "\\src\\app\\dades-generals",
     "\\src\\app\\seguidor-card",
-    "\\src\\app\\seguidor-orientacio",
-    "\\src\\assets",
-    "\\src\\assets\\img",
-    "\\src\\environments"
+    "\\src\\app\\seguidor-orientacio"
   ],
-  "SelectedNode": "\\src\\app\\seguidor-orientacio\\seguidor-orientacio.component.html",
+  "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.html",
   "PreviewInSolutionExplorer": false
 }

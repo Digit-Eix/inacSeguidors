@@ -13,15 +13,15 @@ export class SeguidorOrientacioComponent implements OnInit {
 
     gaugeType = 'arch';
     gaugeSize = 250;
-    gaugeMinValue = 5;
-    gaugeMaxValue = 355;
+    gaugeMinValue = 0;
+    gaugeMaxValue = 360;
     gaugeStyle = "round";
     gaugeThicknes = 15;
-    //gaugeLabel = 'Orientación';
-    gaugeLabel = '';
+    gaugeLabel = 'Orientación';
     gaugeAppendText = '';
     gaugeAnim = true;
     color = "#ffa828";
+
   constructor() { }
 
   ngOnInit(): void {

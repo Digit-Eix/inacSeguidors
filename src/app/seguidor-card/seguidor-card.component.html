@@ -6,44 +6,56 @@
         <mat-card-title>{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <mat-grid-list cols="4">
-            <mat-grid-tile cols="1">
-                <app-calendar-card></app-calendar-card>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="3">
-                <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
-            </mat-grid-tile>
-        </mat-grid-list>
+        <div class="seguidor-orientacio-web">
+          <mat-grid-list cols="4">
+              <mat-grid-tile cols="1">
+                  <app-calendar-card></app-calendar-card>
+              </mat-grid-tile>
+              <mat-grid-tile colspan="3">
+                  <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
+              </mat-grid-tile>
+          </mat-grid-list>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h3 class="alert alert-dark">{{seguidorField.seguidors[segNum].nom}}</h3>
+                <div class="col-12 seguidor-orientacio-web">
+                    <h3 class="alert alert-dark ">{{seguidorField.seguidors[segNum].nom}}</h3>
                 </div>
-            </div>
+                <div class="posicionament1 seguidor-orientacio-mobil" style="min-width:100%; margin-top:20px;">
+                        <div style="width:25%; float:left; text-align:center; margin: 8.8px 0px;">
+                            <button type="button" class="btn btn-light next seguidor-orientacio-mobil" (click)="prevSeg()"><</button>
+                        </div>
+                        <div style="width:50%; float:left; text-align:center;">
+                            <h3 class="alert alert-dark">{{seguidorField.seguidors[segNum].nom}}</h3>
+                        </div>
+                        <div style="width:25%; float:left; text-align:center; margin: 8.8px 0px;">
+                            <button type="button" class="btn btn-light next seguidor-orientacio-mobil" (click)="nextSeg()">></button>
+                        </div>
+                </div>
+            </div>                
             <div class="row">
-                <div class="col-1">
+                <div class="col-1 seguidor-orientacio-web">
                     <button type="button" class="btn btn-light next" (click)="prevSeg()"><</button>
                 </div>
-                <div class="col-10">
-                    <div class="container">
+                <div class="col-10 marge-mobil">
+                    <div class="container no-margin">
                         <div class="row" style="display:flex;justify-content: space-around;">
-                            <div class="col-6" style="min-width: 300px;">
-                                <h4 class="text-center">RD Orientación</h4>
-                                <div class="card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
-                                 <!--<ngx-gauge [type]="gaugeType" [value]="seguidorField.seguidors[this.segNum].rdOrientacio" [thick]="15" [label]="gaugeLabel" [append]="gaugeAppendText">
-                                    </ngx-gauge>-->
-                                    <app-seguidor-orientacio [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio> 
+                            <div class="col-6 contenidor-petit" style="min-width: 50%;">
+                                <h4 class="text-center titol-mobil">RD Orientación</h4>
+                                <div class="contenidor-orientacio card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
+                                    <app-seguidor-orientacio class="seguidor-orientacio-web" [size]="250" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
+                                    <app-seguidor-orientacio class="seguidor-orientacio-mobil" [size]="100" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
                                 </div>
                                 <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow">
                                     {{seguidorField.seguidors[segNum].spOrientacioMan}}
                                 </div>
                             </div>
-                            <div class="col-6" style="min-width: 300px;">
-                                <h4 class="text-center">RD Inclicación</h4>
-                                <div class="text-center card rounded border border-warning shadow">
-                                    <img class="mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
+                            <div class="col-6 contenidor-petit" style="min-width: 50%;">
+                                <h4 class="text-center titol-mobil">RD Inclicación</h4>
+                                <div class="contenidor-inclinacio text-center card rounded border border-warning shadow">
+                                    <img class="imatge-inclinada-1 mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
                                                margin-top: 5%">
-                                    <mat-grid-list cols="1" style="margin-top:-10%;background-position: center;
+                                    <mat-grid-list cols="1" class="imatge-inclinada-2" style="background-position: center top;
                                     background-repeat: no-repeat; background-size:auto; position: relative; z-index: 1000;
                                     background-image: url('/assets/img/footSeguidor.png');">
                                         <mat-grid-tile class="seguidor-inclinacio">
@@ -57,20 +69,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row m-3">
-                        <div class="col-3">
+                    <div class="row m-3 aParent">
+                        <div class="col-3 no-margin aSon">
                             <button mat-mat-icon-button mat-raised-button>
                                 <mat-icon class="fas fa-hand-paper"></mat-icon>
                                 Auto
                             </button>
                         </div>
-                        <div class='col-9'>
-                            <div class="card border-warning mb-3">
+                        <div class='col-9 no-margin amplada-mobil'>
+                            <div class="card border-warning mb-3 ">
                                 <div class="card-header">{{ "Alarmas" | uppercase }}
                                     <span class="float-right">
-                                        <button mat-fab color="warn" style="font-size:1.5em; color: white" aria-label="Icon button to refresh alarms">
+                                        <button mat-fab color="warn" style="font-size:1.5em; color: white; size:28px;" aria-label="Icon button to refresh alarms">
                                             <mat-icon class="fas fa-sync"></mat-icon>
-                                          </button>
+                                        </button>
                                     </span>
                                 </div>
                                 <div class="card-body text-warning">
@@ -81,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1">
+                <div class="col-1 seguidor-orientacio-web">
                     <button type="button" class="btn btn-light next" (click)="nextSeg()">></button>
                 </div>
             </div>
