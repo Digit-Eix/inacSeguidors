@@ -66,7 +66,8 @@ export class SeguidorCardComponent implements OnInit {
          ['start', 'Start'],
          ['stop', 'Stop'],
          ['status', 'status'],
-         ['alarmes', 'Alarmes']
+         ['alarmes', 'Alarmes'],
+         ['dtlAlarmes', 'DTL_Alarmes']
       ];
         vars.forEach(v => {
           temp[v[0]] = this.rData[`SS${i}_${v[1]}`];

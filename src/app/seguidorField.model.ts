@@ -81,5 +81,6 @@ export class Seguidor {
     start: number;
     stop: number;
     alarmes: string;
+    dtlAlarmes: string;
     constructor() { }
 }
