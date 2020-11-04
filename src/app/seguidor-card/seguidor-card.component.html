@@ -42,17 +42,22 @@
                         <div class="row" style="display:flex;justify-content: space-around;">
                             <div class="col-6 contenidor-petit" style="min-width: 50%;">
                                 <h4 class="text-center titol-mobil">RD Orientación</h4>
-                                <div class="contenidor-orientacio card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
+
+                                <div class="contenidor-inclinacio-web card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
                                     <app-seguidor-orientacio class="seguidor-orientacio-web" [size]="250" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
+                                </div>
+                                <div class="contenidor-inclinacio-mobil card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
                                     <app-seguidor-orientacio class="seguidor-orientacio-mobil" [size]="100" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
                                 </div>
+
                                 <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow">
                                     {{seguidorField.seguidors[segNum].spOrientacioMan}}
                                 </div>
                             </div>
                             <div class="col-6 contenidor-petit" style="min-width: 50%;">
                                 <h4 class="text-center titol-mobil">RD Inclicación</h4>
-                                <div class="contenidor-inclinacio text-center card rounded border border-warning shadow">
+
+                                <div class="contenidor-inclinacio-web text-center card rounded border border-warning shadow ">
                                     <img class="imatge-inclinada-1 mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
                                                margin-top: 5%">
                                     <mat-grid-list cols="1" class="imatge-inclinada-2" style="background-position: center top;
@@ -63,6 +68,19 @@
                                         </mat-grid-tile>
                                     </mat-grid-list>
                                 </div>
+
+                                <div class="contenidor-inclinacio-mobil text-center card rounded border border-warning shadow ">
+                                    <div>
+                                      <img class="imatge-inclinada-1 mx-auto d-block flex-auto" width="80%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
+                                               margin-top: 5%">
+                                    </div>
+                                    <div class="background-custom-image">
+                                        <mat-grid-tile class="seguidor-inclinacio">
+                                            <div class="number">{{seguidorField.seguidors[segNum].rdInclinacio|number:'1.0-0'}}</div>
+                                        </mat-grid-tile>
+                                    </div>
+                                </div>
+
                                 <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow">
                                     {{seguidorField.seguidors[segNum].spInclinacioMan}}
                                 </div>
