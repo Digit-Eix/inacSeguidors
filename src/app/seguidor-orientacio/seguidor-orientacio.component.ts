@@ -9,6 +9,7 @@ import { SeguidorField, Seguidor } from '../seguidorField.model';
 export class SeguidorOrientacioComponent implements OnInit {
 
   @Input() seguidorField: number;
+  @Input() size: number;
 
     gaugeType = 'arch';
     gaugeSize = 250;
