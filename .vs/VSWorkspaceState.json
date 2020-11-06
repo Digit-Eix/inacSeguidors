@@ -6,6 +6,10 @@
     "\\src\\app\\seguidor-card",
     "\\src\\app\\seguidor-orientacio"
   ],
+<<<<<<< Updated upstream
   "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.html",
+=======
+  "SelectedNode": "\\src\\app\\seguidor-orientacio\\seguidor-orientacio.component.css",
+>>>>>>> Stashed changes
   "PreviewInSolutionExplorer": false
 }

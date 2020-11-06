@@ -101,15 +101,15 @@ button.next {
     transform: rotate(5deg);
 }
 
-.seguidor-orientacio .number {
-    position: absolute;
-    font-size: 40px;
+.number-seguidor-orientacio-web {
+    text-align:center;
+    position: relative;
+    font-size: 60px;
     font-weight: bolder;
-    border-radius: 50%;
-    border: 10px solid;
     padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
+    color: black;
+    
+    margin-top:-50%;
 }
 
 .seguidor-inclinacio .number {
@@ -123,6 +123,8 @@ button.next {
     position: relative;
     z-index: 10;
     margin-top:-60%;
+    margin-left:auto;
+    margin-right:5%!important;
 }
 
 :host /deep/ .mat-progress-spinner circle,
@@ -196,10 +198,20 @@ button.next {
   visibility: visible;
 }
 
+.sense-marges{
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+
+.gauge .reading-block{
+  font-size:0px!important;
+}
+
 @media only screen and (max-width: 991px) and (min-width: 767px) {
 
 .seguidor-inclinacio .number {
-    font-size: 40px;
+    width:35%;
+    font-size: 30px;
     font-weight: bolder;
     border-radius: 50%;
     border: 10px solid;
@@ -209,9 +221,26 @@ button.next {
     position: relative;
     z-index: 10;
     margin-top:-40%;
+    margin-left:auto;
+    margin-right:5%!important;
   }
 
-  .contenidor-petit{
+  .number-seguidor-orientacio-mobil {
+    text-align:center;
+    position: relative;
+    font-size: 45px;
+    font-weight: bolder;
+    padding: 0.5em;
+    color: black;
+    margin-top:-60%;
+}
+
+  .calcul-distancies{
+    padding-left:25px!important;
+    padding-right: 0px!important;
+  }
+
+ .contenidor-petit{
     max-width:30%;
   }
 
@@ -246,7 +275,6 @@ button.next {
   display: none;
 }
 
-
 .background-custom-image{
     width:100%;
     padding-top: 51%;
@@ -254,29 +282,14 @@ button.next {
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
-
 }
 
 .titol-mobil{
   font-size: 20px;
 }
 
-.aParent {
-    float: left;
-    clear: none;
-    margin-left: 0px!important;
-    margin-top: 0px!important;
-    margin-right: 0px!important;
-    position: relative;
-    text-align:center;
-}
-
-.aSon{
-  margin-left:30%;
-}
-
 .no-margin{
-  padding-left: 0px!important;
+  padding-left: 15px!important;
   padding-right: 0px!important;
 }
 
@@ -304,16 +317,34 @@ button.next {
 
 @media only screen and (max-width: 766px) and (min-width: 450px) {
   .seguidor-inclinacio .number {
-    font-size: 40px;
+    width:35%;
+    font-size: 25px;
     font-weight: bolder;
     border-radius: 50%;
-    border: 10px solid;
+    border: 8px solid;
     padding: 0.5em;
     color: #ffa828;
     opacity: 0.6;
     position: relative;
     z-index: 10;
-    margin-top:-40%;
+    margin-top:-50%;
+    margin-left:auto;
+    margin-right:5%!important;
+  }
+
+  .number-seguidor-orientacio-mobil {
+    text-align:center;
+    position: relative;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0.5em;
+    color: black;
+    margin-top:-55%;
+}
+
+  .calcul-distancies{
+    padding-left:15px!important;
+    padding-right: 0px!important;
   }
 
   .contenidor-petit{
@@ -351,23 +382,6 @@ button.next {
   display: none;
 }
 
-.seguidor-inclinacio .number {
-    font-size: 30px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 5px solid;
-    padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
-    position: relative;
-    z-index: 10;
-    margin-top:-0%;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 .background-custom-image{
     width:100%;
     padding-top: 51%;
@@ -375,25 +389,10 @@ button.next {
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
-
 }
 
 .titol-mobil{
   font-size: 13px;
-}
-
-.aParent {
-    float: left;
-    clear: none;
-    margin-left: 0px!important;
-    margin-top: 0px!important;
-    margin-right: 0px!important;
-    position: relative;
-    text-align:center;
-}
-
-.aSon{
-  margin-left:30%;
 }
 
 .no-margin{
@@ -424,16 +423,47 @@ button.next {
 
 @media only screen and (max-width: 449px) and (min-width: 331px){
   .seguidor-inclinacio .number {
-    font-size: 40px;
+    width:35%;
+    font-size: 20px;
     font-weight: bolder;
     border-radius: 50%;
-    border: 10px solid;
+    border: 5px solid;
     padding: 0.5em;
     color: #ffa828;
     opacity: 0.6;
     position: relative;
     z-index: 10;
     margin-top:-40%;
+    margin-left:auto;
+    margin-right:5%!important;
+  }
+
+  .number-seguidor-orientacio-mobil {
+    text-align:center;
+    position: relative;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0.5em;
+    color: black;
+    margin-top:-80%;
+}
+
+  .tamany-reduit{
+    font-size: 12px;
+  }
+
+  .float-right{
+    float: left!important;
+    padding-left:5px;
+  }
+
+  .mida-div{
+     min-width: 110px!important;
+  }
+
+  .calcul-distancies{
+    padding-left:15px!important;
+    padding-right: 0px!important;
   }
 
   .contenidor-petit{
@@ -461,6 +491,10 @@ button.next {
   visibility: visible;
 }
 
+.extra-padding{
+  padding-top:20%;
+}
+
 .seguidor-orientacio-mobil{
   visibility: visible;
   display: inline;
@@ -471,23 +505,6 @@ button.next {
   display: none;
 }
 
-.seguidor-inclinacio .number {
-    font-size: 30px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 5px solid;
-    padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
-    position: relative;
-    z-index: 10;
-    margin-top:-0%;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 .background-custom-image{
     width:100%;
     padding-top: 51%;
@@ -495,25 +512,10 @@ button.next {
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
-
 }
 
 .titol-mobil{
   font-size: 10px;
-}
-
-.aParent {
-    float: left;
-    clear: none;
-    margin-left: 0px!important;
-    margin-top: 0px!important;
-    margin-right: 0px!important;
-    position: relative;
-    text-align:center;
-}
-
-.aSon{
-  margin-left:30%;
 }
 
 .no-margin{
@@ -544,38 +546,67 @@ button.next {
 
 @media only screen and (max-width: 330px){
   .seguidor-inclinacio .number {
-    font-size: 40px;
+    width:35%;
+    font-size: 15px;
     font-weight: bolder;
     border-radius: 50%;
-    border: 10px solid;
+    border: 5px solid;
     padding: 0.5em;
     color: #ffa828;
     opacity: 0.6;
     position: relative;
     z-index: 10;
     margin-top:-40%;
+    margin-left:auto;
+    margin-right:5%!important;
+  }
+
+  .number-seguidor-orientacio-mobil {
+    text-align:center;
+    position: relative;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0.5em;
+    color: black;
+    margin-top:-100%;
+}
+
+  .tamany-reduit{
+    font-size: 10px;
+  }
+
+  .float-right{
+     float: left!important;
+  }
+
+  .mida-div{
+     min-width: 90px!important;
   }
 
   .contenidor-petit{
     max-width:30%;
   }
 
+  .extra-padding{
+  padding-top:20%!important;
+}
+
   .contenidor-orientacio{
-  height: 125px!important;
+  height: 90px!important;
   max-height: 200px!important;
   padding-top:10%;
 }
 .contenidor-inclinacio-web{
-  min-height: 125px;
+  min-height: 90px;
   padding-top:10%;
   display: none;
   visibility: hidden;
 }
 
 .contenidor-inclinacio-mobil{
-  min-height: 110px!important;
-  max-height: 100px!important;
-  min-width: 110px!important;
+  min-height: 90px!important;
+  max-height: 90px!important;
+  min-width: 90px!important;
   padding-top:10%;
   display: inherit;
   visibility: visible;
@@ -591,23 +622,6 @@ button.next {
   display: none;
 }
 
-.seguidor-inclinacio .number {
-    font-size: 30px;
-    font-weight: bolder;
-    border-radius: 50%;
-    border: 5px solid;
-    padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
-    position: relative;
-    z-index: 10;
-    margin-top:-0%;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 .background-custom-image{
     width:100%;
     padding-top: 51%;
@@ -615,25 +629,10 @@ button.next {
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
-
 }
 
 .titol-mobil{
-  font-size: 10px;
-}
-
-.aParent {
-    float: left;
-    clear: none;
-    margin-left: 0px!important;
-    margin-top: 0px!important;
-    margin-right: 0px!important;
-    position: relative;
-    text-align:center;
-}
-
-.aSon{
-  margin-left:30%;
+  font-size: 15px;
 }
 
 .no-margin{

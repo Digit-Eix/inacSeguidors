@@ -6,9 +6,25 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-seguidor-card',
   templateUrl: './seguidor-card.component.html',
-  styleUrls: ['./seguidor-card.component.css']
+  styleUrls: ['./seguidor-card.component.css'],
+  template: `
+    <button (click)="onClickMe()">Click me!</button>`
 })
 export class SeguidorCardComponent implements OnInit {
+
+  //inici codi per mostrar el boto en Auto o Manual
+  //fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
+  clickValue:number;
+  onClickMe() {
+    if(this.clickValue == 0){
+      this.clickValue = 1;
+    } else{
+      this.clickValue = 0;
+    }
+    console.log(this.clickValue);
+  }
+   //fi codi per mostrar el boto en Auto o Manual
+
 
   seguidorField: SeguidorField = new SeguidorField();
   title  = 'Ballesteros';
@@ -27,6 +43,7 @@ rData: any = {};
 segNum: number;
 // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
   seguidorDataUrl = './assets/seguidorData.json';
+<<<<<<< Updated upstream
   // Gauge
     gaugeType = 'arch';
     //gaugeValue = this.seguidorField.seguidors[this.segNum].rdOrientacio;
@@ -35,6 +52,10 @@ segNum: number;
     gaugeAppendText = '';
 
   constructor(private _http: HttpClient) {
+=======
+  constructor(private http: HttpClient) {
+    this.clickValue = 0;
+>>>>>>> Stashed changes
    }
 
   ngOnInit() {
