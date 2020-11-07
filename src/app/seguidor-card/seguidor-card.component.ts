@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./seguidor-card.component.css']
 })
 export class SeguidorCardComponent implements OnInit {
-
+  clickValue: number;
   seguidorField: SeguidorField = new SeguidorField();
   title  = 'Ballesteros';
   temp: Seguidor = new Seguidor();
@@ -18,7 +18,20 @@ export class SeguidorCardComponent implements OnInit {
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
   seguidorDataUrl = './assets/seguidorData.json';
-  constructor(private http: HttpClient) {
+  // inici codi per mostrar el boto en Auto o Manual
+  // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
+  onClickMe() {
+    if (this.clickValue === 0){
+      this.clickValue = 1;
+    } else{
+      this.clickValue = 0;
+    }
+    console.log(this.clickValue);
+  }
+   // fi codi per mostrar el boto en Auto o Manual
+
+  constructor(private _http: HttpClient) {
+    this.clickValue = 0;
    }
 
   ngOnInit() {
@@ -67,7 +80,9 @@ export class SeguidorCardComponent implements OnInit {
          ['stop', 'Stop'],
          ['status', 'status'],
          ['alarmes', 'Alarmes'],
-         ['dtlAlarmes', 'DTL_Alarmes']
+         ['dtlAlarmes', 'DTL_Alarmes'],
+         ['potenciaInv1', 'Potencia_Inv1'],
+         ['potenciaInv2', 'Potencia_Inv2']
       ];
         vars.forEach(v => {
           temp[v[0]] = this.rData[`SS${i}_${v[1]}`];
@@ -103,6 +118,6 @@ export class SeguidorCardComponent implements OnInit {
     // });
     // return this._http.get(url, {headers});
     const url = `${this.seguidorDataUrl}`;
-    return this.http.get(url);
+    return this._http.get(url);
   }
 }
