@@ -6,9 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-seguidor-card',
   templateUrl: './seguidor-card.component.html',
-  styleUrls: ['./seguidor-card.component.css'],
-  template: `
-    <button (click)="onClickMe()">Click me!</button>`
+  styleUrls: ['./seguidor-card.component.css']
 })
 export class SeguidorCardComponent implements OnInit {
 
@@ -43,19 +41,8 @@ rData: any = {};
 segNum: number;
 // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
   seguidorDataUrl = './assets/seguidorData.json';
-<<<<<<< Updated upstream
-  // Gauge
-    gaugeType = 'arch';
-    //gaugeValue = this.seguidorField.seguidors[this.segNum].rdOrientacio;
-    //gaugeValue = 0;
-    gaugeLabel = 'Orientación';
-    gaugeAppendText = '';
-
   constructor(private _http: HttpClient) {
-=======
-  constructor(private http: HttpClient) {
     this.clickValue = 0;
->>>>>>> Stashed changes
    }
 
   ngOnInit() {
@@ -104,7 +91,11 @@ segNum: number;
          ['limitInclinacioMaxim', 'Limit_Inclinacio_Maxim'],
          ['start', 'Start'],
          ['stop', 'Stop'],
-         ['status', 'status']
+         ['status', 'status'],
+         ['alarmes', 'Alarmes'],
+         ['dtlAlarmes', 'DTL_Alarmes'],
+         ['potenciaInv1', 'Potencia_Inv1'],
+         ['potenciaInv2', 'Potencia_Inv2']
       ];
         vars.forEach(v => {
           //console.log(v[0]);

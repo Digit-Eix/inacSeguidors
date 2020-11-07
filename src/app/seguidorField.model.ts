@@ -1,3 +1,5 @@
+import { NodeCompatibleEventEmitter } from 'rxjs/internal/observable/fromEvent';
+
 export class SeguidorField {
     spOrientacio: number;
     spInclinacio: number;
@@ -80,5 +82,9 @@ export class Seguidor {
     limitInclinacioMaxim: number;
     start: number;
     stop: number;
+    alarmes: string;
+    dtlAlarmes: string;
+    potenciaInv1: number;
+    potenciaInv2: number;
     constructor() { }
 }
