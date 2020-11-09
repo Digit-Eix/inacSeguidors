@@ -96,16 +96,21 @@
                     <div>
                         <div class="row m-3 sense-marges" style="text-align:center;">
                             <div class="col-6 no-margin">
-                                <button (click)="onClickMe()" mat-mat-icon-button mat-raised-button>
-                                    <div *ngIf="clickValue == 0">Auto</div>
-                                    <mat-icon *ngIf="clickValue == 1" class="fas fa-hand-paper" style="padding-top: 10%!important;"></mat-icon>
-                                </button>
+                                1:{{seguidorField.seguidors[segNum].potenciaInv1}}<br>
+                                2:{{seguidorField.seguidors[segNum].potenciaInv2}}
                             </div>
                             <div class='col-6 calcul-distancies'>
                                 <div class="card border-warning mb-3 mida-div">
+                                    
                                     <div class="card-header tamany-reduit">{{ "Alarmas" | uppercase }}
+                                        <span class="float-left">
+                                            <button (click)="onClickMe()" mat-mat-icon-button mat-raised-button>
+                                                <div *ngIf="clickValue == 0">Auto</div>
+                                                <mat-icon *ngIf="clickValue == 1" class="fas fa-hand-paper" style="padding-top: 10%!important;"></mat-icon>
+                                            </button>
+                                        </span>
                                         <span class="float-right">
-                                            <button mat-fab color="warn" style="font-size:1.5em; color: white; size:28px;" aria-label="Icon button to refresh alarms">
+                                            <button type="button" class="btn btn-warning" aria-label="Icon button to refresh alarms">
                                                 <mat-icon class="fas fa-sync"></mat-icon>
                                             </button>
                                         </span>
