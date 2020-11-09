@@ -45,15 +45,9 @@
 
                                 <div class="contenidor-inclinacio-web card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
                                     <app-seguidor-orientacio class="seguidor-orientacio-web" [size]="250" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
-                                    <div class="number-seguidor-orientacio-web">
-                                        {{seguidorField.seguidors[this.segNum].rdOrientacio|number:'1.0-0'}}
-                                    </div>
                                 </div>
                                 <div class="contenidor-inclinacio-mobil card rounded border border-warning shadow m-auto align-content-center extra-padding" style="margin-right: 5px; border-radius: 1em;">
                                     <app-seguidor-orientacio class="seguidor-orientacio-mobil" [size]="100" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
-                                    <div class="number-seguidor-orientacio-mobil">
-                                        {{seguidorField.seguidors[this.segNum].rdOrientacio|number:'1.0-0'}}
-                                    </div>
                                 </div>
 
                                 <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow"style="text-align:center;">
@@ -95,11 +89,83 @@
                     </div>
                     <div>
                         <div class="row m-3 sense-marges" style="text-align:center;">
-                            <div class="col-6 no-margin">
-                                1:{{seguidorField.seguidors[segNum].potenciaInv1}}<br>
-                                2:{{seguidorField.seguidors[segNum].potenciaInv2}}
+                            <div class="col-6 contenidor-petit estil-marge" style="min-width: 50%;">
+                                <h4 class="text-center titol-mobil">RD Producción</h4>
+                                <div class="contenidor-inclinacio-web card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em; text-align:center; padding-top:5%; height:auto!important;">
+                                    <div>
+                                        <h4>Actual</h4>
+                                    </div>
+                                    <div style="margin:0px auto; min-width:80%;">
+                                        <div class="border border-warning rounded" style="display:flex;justify-content: space-around; font-size:20px;">
+                                            <div style="width:48%; float-left; padding:5px;">
+                                                Inv. 1:
+                                            </div>
+                                            <div style="width:48%; float-right; padding:5px;">
+                                                {{seguidorField.seguidors[segNum].potenciaInv1}}
+                                            </div> 
+                                        </div>
+                                        <div class="border border-warning rounded" style="display:flex;justify-content: space-around; font-size:20px; margin-top:5px;">
+                                            <div style="width:48%; float-left; padding:5px;">
+                                                Inv. 2:
+                                            </div>
+                                            <div style="width:48%; float-right; padding:5px;">
+                                                {{seguidorField.seguidors[segNum].potenciaInv2}}
+                                            </div>                                        
+                                        </div>
+                                        <div class="border border-warning rounded" style="font-size:20px; padding:5px; width:50%; margin:5px auto;">
+                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            Sumatori de Inv 1 + Inv 2
+                                        </div>
+                                    </div>
+                                    <div style="padding-top:2%;">
+                                        <h4>Diaria</h4>
+                                    </div>
+                                    <div style="margin:0px auto; min-width:80%;">
+                                        <div class="border border-warning rounded" style="font-size:20px; padding:5px; width:50%; margin:5px auto;">
+                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            Sumatori produccio diaria
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contenidor-produccio-mobil card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;padding-top:5%!important; height:auto!important;">
+                                     <div>
+                                        <h6 class="titol-mobil">Actual</h6>
+                                    </div>
+                                    <div style="margin:0px auto; width:90%;">
+                                        <div class="border border-warning rounded text-produccio" style="display:flex;justify-content: space-around; font-size:12px;">
+                                            <div style="width:42%; float-left; padding:5px;">
+                                                Inv. 1:
+                                            </div>
+                                            <div style="width:42%; float-right; padding:5px;">
+                                                {{seguidorField.seguidors[segNum].potenciaInv1}}
+                                            </div> 
+                                        </div>
+                                        <div class="border border-warning rounded text-produccio" style="display:flex;justify-content: space-around; font-size:12px; margin-top:5px;">
+                                            <div style="width:42%; float-left; padding:5px;">
+                                                Inv. 2:
+                                            </div>
+                                            <div style="width:42%; float-right; padding:5px;">
+                                                {{seguidorField.seguidors[segNum].potenciaInv2}}
+                                            </div>                                        
+                                        </div>
+                                        <div class="border border-warning rounded text-produccio" style="font-size:12px; padding:5px; width:80%; margin:5px auto;">
+                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            175
+                                        </div>
+                                    </div>
+                                    <div style="padding-top:2%;">
+                                        <h6 class="titol-mobil">Diaria</h6>
+                                    </div>
+                                    <div style="margin:0px auto; min-width:80%;">
+                                        <div class="border border-warning rounded text-produccio" style="font-size:12px; padding:5px; width:80%; margin:5px auto;">
+                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            500
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class='col-6 calcul-distancies'>
+                              <h4 class="text-center titol-mobil" style="color:white!important;">RD</h4>
                                 <div class="card border-warning mb-3 mida-div">
                                     
                                     <div class="card-header tamany-reduit">{{ "Alarmas" | uppercase }}

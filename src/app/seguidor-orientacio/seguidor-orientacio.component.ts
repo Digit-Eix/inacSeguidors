@@ -22,8 +22,8 @@ export class SeguidorOrientacioComponent implements OnInit {
     gaugeMaxValue = 355;
     gaugeStyle = 'round';
     gaugeThicknes = 15;
-    gaugeLabel = '';
     gaugeAppendText = '';
+    gaugeLabel ='';
     gaugeAnim = true;
     color = '#ffa828';
   constructor() { }

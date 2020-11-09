@@ -7,6 +7,11 @@
   transform: rotateY(3.142rad)rotateX(3.142rad);
 }
 
+.rotacio-numero{
+  transform: rotateY(3.142rad)rotateX(3.142rad);
+  margin-top: -30%;
+}
+
 @media only screen and (max-width: 991px) and (min-width: 450px){
   .gauge{
     padding-top: 10px;
