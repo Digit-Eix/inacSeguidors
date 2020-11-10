@@ -1,24 +1,24 @@
-<table class="table">
+<table class="table mida-lletra">
     <tbody>
         <tr>
             <th scope="row">SP Orientación:</th>
-            <td>{{seguidor.spOrientacio}}&deg;</td>
+            <td>{{seguidor.spOrientacio|number:'1.0-0'}}&deg;</td>
         </tr>
         <tr>
             <th scope="row">SP Inclinación:</th>
-            <td>{{seguidor.spInclinacio}}&deg;</td>
+            <td>{{seguidor.spInclinacio|number:'1.0-0'}}&deg;</td>
         </tr>
         <tr>
             <th scope="row">Viento:</th>
-            <td>{{seguidor.ventActual}} Km/h</td>
+            <td>{{seguidor.ventActual|number:'1.0-0'}} Km/h</td>
         </tr>
 </table>
 
-<ul class="list-group list-group-horizontal">
+<ul class="list-group list-group-horizontal mida-lletra">
     <li class="list-group-item bold">{{seguidor.ssGeneral}}</li>
-    <li class="list-group-item">{{seguidor.estatGeneral}}</li>
-    <li class="list-group-item">{{seguidor.rdOrientacioGeneral}}</li>
-    <li class="list-group-item">{{seguidor.rdInclinacioGeneral}}</li>
-    <li class="list-group-item">{{seguidor.alarmesGeneral}}</li>
+    <li class="list-group-item">{{seguidor.estatGeneral|number:'1.0-0'}}</li>
+    <li class="list-group-item">{{seguidor.rdOrientacioGeneral|number:'1.0-0'}}</li>
+    <li class="list-group-item">{{seguidor.rdInclinacioGeneral|number:'1.0-0'}}</li>
+    <li class="list-group-item">{{seguidor.alarmesGeneral|number:'1.0-0'}}</li>
 
 </ul>

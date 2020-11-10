@@ -210,6 +210,33 @@ button.next {
   font-size:0px!important;
 }
 
+.div1{
+  width:40%;
+  padding-right:5%;
+  padding-left:5%;
+  float: left;
+}
+
+.div2{
+  width:40%;
+  float: left;
+  padding-top:1%;
+}
+
+.div3{
+  width:20%;
+  padding-left:5%;
+  padding-right:5%;
+  float: left;
+  text-align:center;
+}
+
+.contenidor-personalitzat{
+  overflow:hidden;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
 @media only screen and (max-width: 991px) and (min-width: 767px) {
 
 .seguidor-inclinacio .number {
@@ -225,6 +252,19 @@ button.next {
     margin-left:auto;
     margin-right:5%!important;
   }
+
+  .div1{
+  width:30%;
+  padding-right:3%;
+  padding-left:3%;
+  float: left;
+}
+
+.div2{
+  width:60%;
+  float: left;
+  padding-top:0%;
+}
 
   .number-seguidor-orientacio-mobil {
     text-align:center;
@@ -343,6 +383,20 @@ button.next {
     padding-left:0px!important;
   }
 
+  .div1{
+  width:110px;
+  padding-right:3%;
+  padding-left:0%;
+  float: left;
+}
+
+.div2{
+  width:60%;
+  float: left;
+  padding-top:0%;
+  margin-left:10px;
+}
+
   .number-seguidor-orientacio-mobil {
     text-align:center;
     position: relative;
@@ -455,6 +509,10 @@ button.next {
     margin-right:5%!important;
   }
 
+  .boto-petit{
+    width:24px;
+  }
+
   .estil-marge{
     padding-left:0px!important;
   }
@@ -462,6 +520,20 @@ button.next {
   .text-produccio{
     font-size: 10px!important;
   }
+
+  .div1{
+  width:110px;
+  padding-right:3%;
+  padding-left:0%;
+  float: left;
+}
+
+.div2{
+  width:40%;
+  float: left;
+  padding-top:0%;
+  margin-left:10px;
+}
 
   .number-seguidor-orientacio-mobil {
     text-align:center;
@@ -591,6 +663,28 @@ button.next {
     margin-left:auto;
     margin-right:5%!important;
   }
+
+  .boto-petit{
+    width:24px;
+  }
+
+  .marge-personalitzat{
+    padding:0px!important;
+  }
+
+  .div1{
+  width:90px;
+  padding-right:0%;
+  padding-left:0%;
+  float: left;
+}
+
+.div2{
+  width:40%;
+  float: left;
+  padding-top:0%;
+  margin-left:5px;
+}
 
   .estil-marge{
     padding-left:0px!important;

@@ -7,14 +7,29 @@
     </mat-card-header>
     <mat-card-content>
         <div class="seguidor-orientacio-web">
-          <mat-grid-list cols="4">
-              <mat-grid-tile cols="1">
-                  <app-calendar-card></app-calendar-card>
-              </mat-grid-tile>
-              <mat-grid-tile colspan="3">
-                  <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
-              </mat-grid-tile>
-          </mat-grid-list>
+            <div class="container">
+                <div class="row contenidor-personalitzat">
+                    <div class="col-12">
+                        <div class="div1">
+                            <app-calendar-card></app-calendar-card>
+                        </div>
+                        <div class="div2">
+                            <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
+                        </div>
+                        <div class="div3">
+                            <div style="width100%; margin-top:10px">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img src="/assets/img/user.png" /></button>
+                            </div>
+                            <div style="width100%; margin:15px auto">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img src="/assets/img/settings-icon.png" /></button>
+                            </div>
+                            <div style="width100%; margin-top:15px auto">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img src="/assets/img/exit-icon.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="row">
@@ -50,7 +65,7 @@
                                     <app-seguidor-orientacio class="seguidor-orientacio-mobil" [size]="100" [seguidorField]=seguidorField.seguidors[this.segNum].rdOrientacio></app-seguidor-orientacio>
                                 </div>
 
-                                <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow"style="text-align:center;">
+                                <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow"style="text-align:center;margin-left:auto!important; margin-right:auto!important;">
                                     {{seguidorField.seguidors[segNum].spOrientacioMan|number:'1.0-0'}}
                                 </div>
                             </div>
@@ -81,11 +96,19 @@
                                     </div>
                                 </div>
 
-                                <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow" style="text-align:center;">
+                                <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow" style="text-align:center;margin-left:auto!important; margin-right:auto!important;">
                                     {{seguidorField.seguidors[segNum].spInclinacioMan|number:'1.0-0'}}
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div style="width:100%!important;height:auto!important; text-align:center; margin-top:10px;">
+                        <span class="float-center">
+                             <button class="boto-petit"(click)="onClickMe()" mat-mat-icon-button mat-raised-button>
+                                  <div *ngIf="clickValue == 0">Auto</div>
+                                  <mat-icon *ngIf="clickValue == 1" class="fas fa-hand-paper" style="padding-top: 10%!important;"></mat-icon>
+                             </button>
+                        </span>
                     </div>
                     <div>
                         <div class="row m-3 sense-marges" style="text-align:center;">
@@ -101,7 +124,7 @@
                                                 Inv. 1:
                                             </div>
                                             <div style="width:48%; float-right; padding:5px;">
-                                                {{seguidorField.seguidors[segNum].potenciaInv1}}
+                                                {{seguidorField.seguidors[segNum].potenciaInv1}} kW
                                             </div> 
                                         </div>
                                         <div class="border border-warning rounded" style="display:flex;justify-content: space-around; font-size:20px; margin-top:5px;">
@@ -109,12 +132,12 @@
                                                 Inv. 2:
                                             </div>
                                             <div style="width:48%; float-right; padding:5px;">
-                                                {{seguidorField.seguidors[segNum].potenciaInv2}}
+                                                {{seguidorField.seguidors[segNum].potenciaInv2}} kW
                                             </div>                                        
                                         </div>
                                         <div class="border border-warning rounded" style="font-size:20px; padding:5px; width:50%; margin:5px auto;">
                                             <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
-                                            Sumatori de Inv 1 + Inv 2
+                                            175 kW
                                         </div>
                                     </div>
                                     <div style="padding-top:2%;">
@@ -123,7 +146,7 @@
                                     <div style="margin:0px auto; min-width:80%;">
                                         <div class="border border-warning rounded" style="font-size:20px; padding:5px; width:50%; margin:5px auto;">
                                             <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
-                                            Sumatori produccio diaria
+                                            500 kW
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +160,7 @@
                                                 Inv. 1:
                                             </div>
                                             <div style="width:42%; float-right; padding:5px;">
-                                                {{seguidorField.seguidors[segNum].potenciaInv1}}
+                                                {{seguidorField.seguidors[segNum].potenciaInv1}} kW
                                             </div> 
                                         </div>
                                         <div class="border border-warning rounded text-produccio" style="display:flex;justify-content: space-around; font-size:12px; margin-top:5px;">
@@ -145,12 +168,12 @@
                                                 Inv. 2:
                                             </div>
                                             <div style="width:42%; float-right; padding:5px;">
-                                                {{seguidorField.seguidors[segNum].potenciaInv2}}
+                                                {{seguidorField.seguidors[segNum].potenciaInv2}} kW
                                             </div>                                        
                                         </div>
                                         <div class="border border-warning rounded text-produccio" style="font-size:12px; padding:5px; width:80%; margin:5px auto;">
-                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
-                                            175
+                                            <img class="boto-petit" src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            175 kW
                                         </div>
                                     </div>
                                     <div style="padding-top:2%;">
@@ -158,23 +181,18 @@
                                     </div>
                                     <div style="margin:0px auto; min-width:80%;">
                                         <div class="border border-warning rounded text-produccio" style="font-size:12px; padding:5px; width:80%; margin:5px auto;">
-                                            <img src="/assets/img/lightning_weather_icon.png" alt="llamp">
-                                            500
+                                            <img class="boto-petit" src="/assets/img/lightning_weather_icon.png" alt="llamp">
+                                            500 kW
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class='col-6 calcul-distancies'>
+                            <div class='col-6 calcul-distancies' >
                               <h4 class="text-center titol-mobil" style="color:white!important;">RD</h4>
                                 <div class="card border-warning mb-3 mida-div">
                                     
                                     <div class="card-header tamany-reduit">{{ "Alarmas" | uppercase }}
-                                        <span class="float-left">
-                                            <button (click)="onClickMe()" mat-mat-icon-button mat-raised-button>
-                                                <div *ngIf="clickValue == 0">Auto</div>
-                                                <mat-icon *ngIf="clickValue == 1" class="fas fa-hand-paper" style="padding-top: 10%!important;"></mat-icon>
-                                            </button>
-                                        </span>
+                                        
                                         <span class="float-right">
                                             <button type="button" class="btn btn-warning" aria-label="Icon button to refresh alarms">
                                                 <mat-icon class="fas fa-sync"></mat-icon>
@@ -196,7 +214,32 @@
                 </div>
             </div>
         </div>
-        <div class="container-12">
+        <div class="container-12 marge-mobil">
+        <div class="seguidor-orientacio-mobil">
+            <div class="container">
+                <div class="row" style="overflow:hidden; margin-top:10px;">
+                    <div style="width:100%; margin-right:8%; margin-bottom:30px;">
+                        <div style="width:33%; float: left; text-align:center;">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img class="boto-petit" src="/assets/img/user.png" /></button>
+                        </div>
+                        <div style="width:33%; float: left;text-align:center;">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img class="boto-petit" src="/assets/img/settings-icon.png" /></button>
+                        </div>
+                        <div style="width:33%; float: left;text-align:center;">
+                                <button type="button" style="border-radius:10px;" (click)="prevSeg()"><img class="boto-petit" src="/assets/img/exit-icon.png" /></button>
+                        </div>
+                    </div>
+                    <div class="col-12 marge-personalitzat" style="margin:0px auto; margin-bottom:20px;">
+                        <div class="div1">
+                            <app-calendar-card></app-calendar-card>
+                        </div>
+                        <div class="div2">
+                            <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
         <mat-divider></mat-divider>
