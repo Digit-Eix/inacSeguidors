@@ -17,7 +17,8 @@ export class SeguidorCardComponent implements OnInit {
   rData: any = {};
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
-  seguidorDataUrl = './assets/seguidorData.json';
+  // seguidorDataUrl = './assets/seguidorData.json';
+  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   onClickMe() {
@@ -107,17 +108,13 @@ export class SeguidorCardComponent implements OnInit {
           % this.seguidorField.seguidors.length;
   }
   getSeguidorDataHttp() {
-    // const headers = new HttpHeaders({
-    //   Cookie: 'PHPSESSID=521d59eedt9er8bghi29c7uoq6',
-    //   Accept: '*/*',
-    //   'Access-Control-Allow-Headers': '',
-    //   'Access-Control-Allow-Origin': '*',
-    //   Connection: 'keep-alive',
-    //   'Access-Control-Request-Method': 'GET',
-    //   'Access-Control-Request-Headers': 'origin, x-requested-with, accept'
-    // });
+    const headers = new HttpHeaders({
+       'Access-Control-Allow-Origin': '*',
+       'Access-Control-Request-Headers': 'origin, x-requested-with, accept'
+     });
     // return this._http.get(url, {headers});
     const url = `${this.seguidorDataUrl}`;
-    return this._http.get(url);
+    console.log(headers);
+    return this._http.get(url, {headers});
   }
 }
