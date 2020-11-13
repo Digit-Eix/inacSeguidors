@@ -8,6 +8,59 @@ button.next {
     padding: 0px;
 }
 
+/*tag nou*/
+.contenidor-pagina{
+  width:95%;
+  margin: 0px auto!important;
+  padding: 0px;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+}
+
+
+.conenidor-body{
+  width:95%;
+  margin: 0px auto!important;
+  padding: 0px;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+}
+
+.seccio-informacio-general{
+  height:135px;
+  display:in-line block;
+  overflow:visible;
+}
+
+.informacio-1{
+  width:35%;
+  margin-right:0px;
+  float:left;
+}
+.informacio-2{
+  margin-top:10px;
+  width:40%;
+  margin-right:0px;
+  float:left;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.informacio-3{
+  margin-top:10px;
+  float:left;
+  width:10%;
+}
+
+.btn{
+  font-size:12px!important;
+}
+
+
+
+
 .weather-header {
     position: relative;
     padding: 12px;
@@ -29,7 +82,6 @@ button.next {
 }
 
 .weather-header mat-card-title {
-    margin-left: 20px;
     color: #fff;
     z-index: 2;
     position: relative;
@@ -114,10 +166,9 @@ button.next {
 
 .seguidor-inclinacio .number {
     font-size: 50px;
-    font-weight: bolder;
     padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
+    color: black;
+    opacity: 1;
     position: relative;
     z-index: 10;
     margin-top:-60%;
@@ -237,92 +288,156 @@ button.next {
   margin-bottom:40px;
 }
 
-@media only screen and (max-width: 991px) and (min-width: 767px) {
+.contenidor-petit{
+  width:30%;
+  margin: 0% 1.5%;
+}
 
+.boto-petit{
+    width:24px;
+  }
+
+@media only screen and (max-width: 1219px) and (min-width: 807px){
+.seccio-informacio-general{
+  height:135px;
+  display:in-line block;
+  overflow:visible;
+}
+.contenidor-inclinacio-web{
+  min-height: 240px!important;
+  max-height: 280px!important;
+  min-width: 125px!important;
+  padding-top:10%;
+}
+
+.boto-petit{
+    width:24px;
+  }
+}
+
+@media only screen and (max-width: 806px) and (min-width: 683px){
+.seccio-informacio-general{
+  height:135px;
+  display:in-line block;
+  overflow:visible;
+}
+.contenidor-inclinacio-web{
+  min-height: 225px!important;
+  max-height: 225px!important;
+  min-width: 125px!important;
+  padding-top:10%;
+}
+.mida-lletra-titol{
+    font-size:20px!important;
+}
+.mida-lletra-text{
+  font-size:15px!important;
+}
 .seguidor-inclinacio .number {
     width:50%;
     font-size: 40px;
-    font-weight: bolder;
     padding: 0.5em;
-    color: #ffa828;
-    opacity: 0.6;
+    color: black;
+    opacity: 1;
     position: relative;
     z-index: 10;
     margin-top:-40%;
     margin-left:auto;
     margin-right:5%!important;
-  }
-
-  .div1{
-  width:30%;
-  padding-right:3%;
-  padding-left:3%;
-  float: left;
 }
 
-.div2{
-  width:60%;
-  float: left;
-  padding-top:0%;
+.boto-petit{
+    width:24px;
+  }
 }
 
-  .number-seguidor-orientacio-mobil {
-    text-align:center;
-    position: relative;
-    font-size: 45px;
-    font-weight: bolder;
-    padding: 0.5em;
-    color: black;
-    margin-top:-60%;
-}
-
-  .calcul-distancies{
-    padding-left:25px!important;
-    padding-right: 0px!important;
-  }
-
- .contenidor-petit{
-    max-width:30%;
-  }
-
-  .contenidor-orientacio{
-  height: 125px!important;
-  max-height: 200px!important;
-  padding-top:10%;
+@media only screen and (max-width: 682px) and (min-width: 549px){
+.seccio-informacio-general{
+  height:135px;
+  display:in-line block;
+  overflow:visible;
 }
 .contenidor-inclinacio-web{
-  min-height: 250px;
-  padding-top:10%;
-  display: none;
-  visibility: hidden;
-}
-
-.contenidor-inclinacio-mobil{
-  min-height: 210px!important;
-  max-height: 210px!important;
+  min-height: 225px!important;
+  max-height: 225px!important;
   min-width: 125px!important;
   padding-top:10%;
-  display: inherit;
-  visibility: visible;
+}
+.mida-lletra-titol{
+    font-size:20px!important;
+}
+.mida-lletra-text{
+  font-size:15px!important;
 }
 
-.contenidor-produccio-mobil{
-  min-height: 210px!important;
-  min-width: 125px!important;
-  padding-top:10%;
-  display: inherit;
-  visibility: visible;
+.seguidor-inclinacio .number {
+    width:50%;
+    font-size: 35px;
+    padding: 0.5em;
+    color: black;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    margin-top:-40%;
+    margin-left:auto;
+    margin-right:5%!important;
 }
 
-.seguidor-orientacio-mobil{
-  visibility: visible;
-  display: inline;
+.boto-petit{
+    width:24px;
+  }
+
+}
+/*Fins aqui funciona correcte*/
+
+@media only screen and (max-width: 548px) and (min-width: 357px){
+.seccio-informacio-general{
+  height:135px;
+  display:in-line block;
+  overflow:visible;
+}
+.div-secundari{
+  height:40px!important;
 }
 
-.seguidor-orientacio-web{
-  visibility: hidden;
-  display: none;
+#dropdownMenuButton{
+  padding:1px!important;
+  margin-top:7px;
 }
+
+.contenidor-inclinacio-web{
+  min-height: 135px!important;
+  max-height: 135px!important;
+  min-width: 100px!important;
+  padding-top:0%;
+}
+.imatge-inclinada-2{
+  height:80px!important;
+}
+
+.mida-lletra-titol2{
+    font-size:10px!important;
+}
+.mida-lletra-text2{
+    font-size:10px!important;
+}
+
+.padding-reduit{
+  padding:3px;
+}
+
+.seguidor-inclinacio .number {
+    width:50%;
+    font-size: 20px;  
+    padding: 0.5em;
+    color: black;
+    opacity: 16;
+    position: relative;
+    z-index: 10;
+    margin-top:-50%;
+    margin-left:auto;
+    margin-right:5%!important;
+  }
 
 .background-custom-image{
     width:100%;
@@ -333,36 +448,139 @@ button.next {
     background-position: center;
 }
 
+.contenidor-inclinacio-mobil{
+  min-height: 135px!important;
+  max-height: 135px!important;
+  min-width: 100px!important;
+  padding-top:20%;
+  display: inherit;
+  visibility: visible;
+}
+
+
+.contenidor-inclinacio-web2{
+  min-height: 125px;
+  padding-top:0%;
+  display: none;
+  visibility: hidden;
+}
+
+.boto-petit{
+    width:24px;
+  }
+
+  .titol-mobil{
+  font-size: 15px;
+}
+
+}
+
+@media only screen and (max-width: 356px) and (min-width: 100px){
+.seccio-informacio-general{
+  height:115px;
+  display:in-line block;
+  overflow:visible;
+}
+.div-secundari{
+  height:40px!important;
+}
+
+.mida-lletra-titol2{
+    font-size:10px!important;
+}
+.mida-lletra-text2{
+    font-size:10px!important;
+}
+
+.imatge-llamp{
+  visibility:hidden;
+  display:none;
+}
+
+.boto-petit{
+    width:24px;
+  }
+
+  .mida-lletra-text{
+    font-size:12px!important;
+}
+
+.padding-reduit{
+  padding:3px;
+}
+
+.contenidor-inclinacio-web{
+  min-height: 125px!important;
+  max-height: 125px!important;
+  min-width: 90px!important;
+  padding-top:20%;
+}
+
+#dropdownMenuButton{
+  padding:1px!important;
+  margin-top:7px;
+}
+.informacio-2{
+  margin-top:10px;
+  width:40%;
+  margin-right:0px;
+  float:left;
+  margin-left:1%;
+  margin-right:1%;
+}
+.informacio-1{
+  width:37%;
+  margin-right:0px;
+  float:left;
+}
+
+.seguidor-inclinacio .number {
+    width:50%;
+    font-size: 15px;
+    padding: 0.5em;
+    color: black;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    margin-top:-40%;
+    margin-left:auto;
+    margin-right:5%!important;
+  }
+
+  .background-custom-image{
+    width:90%;
+    padding-top: 51%;
+    background: url('/assets/img/footSeguidor.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.contenidor-inclinacio-web2{
+  min-height: 90px;
+  padding-top:10%;
+  display: none;
+  visibility: hidden;
+}
+
+.contenidor-inclinacio-mobil{
+  min-height: 125px!important;
+  max-height: 125px!important;
+  min-width: 90px!important;
+  padding-top:10%;
+  display: inherit;
+  visibility: visible;
+}
+
 .titol-mobil{
-  font-size: 20px;
+  font-size: 12px;
 }
 
-.no-margin{
-  padding-left: 15px!important;
-  padding-right: 0px!important;
 }
 
-.posicionament1{
-  float: left;
-  clear: none;
-}
 
-.amplada-h3{
-  width:50%;
-  float: left;
-}
 
-.amplada-mobil{
-  margin-top:20px!important;
-  min-width:100%!important;
-}
-
-.marge-mobil{
-  margin-left:8.33%!important;
-}
-  
-} 
-
+/*
 
 @media only screen and (max-width: 766px) and (min-width: 450px) {
   .seguidor-inclinacio .number {
@@ -801,3 +1019,4 @@ button.next {
 }
 
 }
+*/

@@ -13,8 +13,11 @@ export class SeguidorOrientacioComponent implements OnInit {
   @Input() size: number;
   name = 'Angular';
   width: number = window.innerWidth;
-  minmobileWidth: number  = 767;
   maxmobileWidth: number  = 991;
+  minmobileWidth: number  = 682;
+  minmobileWidth2: number  = 535;
+  minmobileWidth3: number  = 400;
+  minmobileWidth4: number  = 342;
 
     gaugeType = 'arch';
     gaugeSize = 250;
@@ -34,12 +37,24 @@ export class SeguidorOrientacioComponent implements OnInit {
 
     onWindowResize(event) {
       this.width = event.target.innerWidth;
-      if (this.width <= this.maxmobileWidth && this.width >= this.minmobileWidth) {
-        this.size = 200;
-      } else if (this.width <= this.minmobileWidth) {
-        this.size = 100;
-      } else if (this.width >= this.maxmobileWidth) {
+      if (this.width >= this.maxmobileWidth) {
         this.size = 250;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.maxmobileWidth && this.width >= this.minmobileWidth) {
+        this.size = 200;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.minmobileWidth && this.width >= this.minmobileWidth2) {
+        this.size = 150;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.minmobileWidth2 && this.width >= this.minmobileWidth3) {
+        this.size = 125;
+        this.gaugeThicknes=15;
+      }else if (this.width <= this.minmobileWidth3 && this.width >= this.minmobileWidth4) {
+        this.size = 100;
+        this.gaugeThicknes=10;
+      }else if (this.width <= this.minmobileWidth4) {
+        this.size = 75;
+        this.gaugeThicknes=10;
       }
   }
 

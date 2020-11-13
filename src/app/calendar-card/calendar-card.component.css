@@ -1,103 +1,80 @@
-mat-card-title.day-info {
-    display: block;
-    font-size: 400%;
+.day-info {
+    float:left;
+    padding: 0px 5px;
+    text-align:center!important;
 }
 
 .month-info {
-    display: block;
-    font-size: 250%;
+    float:left;
+    padding: 0px 5px;
+    text-align:center!important;
 }
 
 .year-info {
-    font-size: 150%;
+    float:left;
+    padding: 0px 5px;
+    text-align:center!important;
 }
 
 mat-card{
-  width:230px;
-  margin:10px auto!important;
+  width:100%;
+  margin-left:10px!important;
+  margin-bottom:0px!important;
+  text-align:center!important;
+  padding-right:0px!important;
+  padding-left:0px!important;
+}
+
+.contenidor{
+    overflow:hidden;
+    font-size: 20px;
 }
 
 
-@media only screen and (max-width: 991px) and (min-width: 767px) {
-  mat-card-title.day-info {
-    display: block;
-    font-size: 250%;
-  }
-
-  .month-info {
-    display: block;
-    font-size: 170%;
-  }
-
-  .year-info {
-    font-size: 120%;
-  }
-
-  mat-card{
-    width:150px;
-    margin:0px auto!important;
-  }
+@media only screen and (max-width: 1219px) and (min-width: 807px){
+.contenidor{
+    overflow:hidden;
+    font-size: 15px;
+    font-weight: bolder;
+}
 }
 
-@media only screen and (max-width: 766px) and (min-width: 450px) {
-  mat-card-title.day-info {
-    display: block;
-    font-size: 200%;
-  }
-
-  .month-info {
-    display: block;
-    font-size: 120%;
-  }
-
-  .year-info {
-    font-size: 100%;
-  }
-
-  mat-card{
-    width:110px;
-    margin:0px auto!important;
-  }
+@media only screen and (max-width: 806px) and (min-width: 683px){
+.contenidor{
+    overflow:hidden;
+    font-size: 12px;
+    font-weight: bolder;
+}
 }
 
-@media only screen and (max-width: 449px) and (min-width: 331px){
-   mat-card-title.day-info {
-    display: block;
-    font-size: 150%;
-  }
-
-  .month-info {
-    display: block;
-    font-size: 100%;
-  }
-
-  .year-info {
-    font-size: 80%;
-  }
-
-  mat-card{
-    width:90px;
-    margin:0px auto!important;
-  }
+@media only screen and (max-width: 682px) and (min-width: 549px){
+.contenidor{
+    overflow:hidden;
+    font-size: 12px;
+    font-weight: bolder;
+}
 }
 
-@media only screen and (max-width: 330px){
-  mat-card-title.day-info {
-    display: block;
-    font-size: 150%;
-  }
-
-  .month-info {
-    display: block;
-    font-size: 100%;
-  }
-
-  .year-info {
-    font-size: 80%;
-  }
-
-  mat-card{
-    width:90px;
-    margin:0px auto!important;
-  }
+@media only screen and (max-width: 548px) and (min-width: 357px){
+.contenidor{
+    overflow:hidden;
+    font-size: 12px;
+    font-weight: bolder;
+}
+mat-card{
+  padding-top:10px!important;
+  padding-bottom:10px!important;
+}
+}
+@media only screen and (max-width: 356px) and (min-width: 100px){
+.contenidor{
+    overflow:hidden;
+    font-size: 10px;
+    font-weight: bolder;
+}
+mat-card{
+  padding-top:10px!important;
+  padding-bottom:10px!important;
+  margin-left:0px!important;
+}
 }

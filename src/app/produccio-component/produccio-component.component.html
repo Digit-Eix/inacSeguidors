@@ -1,0 +1,15 @@
+<ngx-charts-gauge
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [legend]="false"
+  [legendPosition]="legendPosition"
+  [min]="0"
+  [max]="5.5"
+  [bigSegments]="0"
+  [smallSegments]="0"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-gauge>
