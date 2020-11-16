@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { single } from './data';
@@ -9,7 +9,7 @@ import { single } from './data';
   styleUrls: ['./produccio-component.component.css'],
   host: {'(window:resize)':'onWindowResize($event)'}
 })
-export class ProduccioComponentComponent {
+export class ProduccioComponentComponent implements OnInit {
 
   single: any[];
   view: any[] = [345, 323];
@@ -21,7 +21,7 @@ export class ProduccioComponentComponent {
   view6: any[] = [110, 180];
   view7: any[] = [300, 275];
   legend: boolean = true;
-  legendPosition: string = 'below';
+  legendPosition: string = 'above';
 
   width: number = window.innerWidth;
   maxmobileWidth: number  = 1219;
@@ -32,12 +32,39 @@ export class ProduccioComponentComponent {
   minmobileWidth4: number  = 455;
   minmobileWidth5: number  = 360;
 
+
+  mirarMida() {
+      if (this.width >= this.maxmobileWidth) {
+          this.view = this.view1;
+      } else if (this.width <= this.maxmobileWidth && this.width >= this.maxmobileWidth2) {
+          this.view = this.view7;
+      }else if (this.width <= this.maxmobileWidth2 && this.width >= this.minmobileWidth) {
+          this.view = this.view2;
+      } else if (this.width <= this.minmobileWidth && this.width >= this.minmobileWidth2) {
+          this.view = this.view3;
+      } else if (this.width <= this.minmobileWidth2 && this.width >= this.minmobileWidth3) {
+          this.view = this.view4;
+      } else if (this.width <= this.minmobileWidth3 && this.width >= this.minmobileWidth4) {
+          this.view = this.view4;
+      } else if (this.width <= this.minmobileWidth4 && this.width >= this.minmobileWidth5) {
+          this.view = this.view5;
+      }else if (this.width <= this.minmobileWidth5) {
+          this.view = this.view6;
+      }
+  }
+
+
   colorScheme = {
     domain: ['#39FF33', '#39FF33']
   };
 
   constructor() {
     Object.assign(this, { single });
+  }
+
+  ngOnInit(): void {
+      this.width= document.body.clientWidth;
+      this.mirarMida();
   }
 
   onSelect(data): void {

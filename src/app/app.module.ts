@@ -20,6 +20,7 @@ import { ProduccioComponentComponent } from './produccio-component/produccio-com
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-placa.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SeguidorOrientacioComponent,
     ProgressBarComponent,
     ProduccioComponentComponent,
+    ConfiguracioPlacaComponent,
   ],
   imports: [
     BrowserModule,

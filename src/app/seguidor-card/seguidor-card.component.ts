@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SeguidorField, Seguidor } from '../seguidorField.model';
 import { getTestBed } from '@angular/core/testing';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seguidor-card',
@@ -9,6 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./seguidor-card.component.css']
 })
 export class SeguidorCardComponent implements OnInit {
+  loading: boolean = true;
   clickValue: number;
   seguidorField: SeguidorField = new SeguidorField();
   title  = 'Huerta Solar Ballesteros';
@@ -29,10 +31,13 @@ export class SeguidorCardComponent implements OnInit {
     console.log(this.clickValue);
   }
    // fi codi per mostrar el boto en Auto o Manual
+   
+  
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private router:Router) {
     this.clickValue = 0;
    }
+
 
   ngOnInit() {
     console.log('ngOnInit');
@@ -93,6 +98,7 @@ export class SeguidorCardComponent implements OnInit {
       console.log('call to server finalizado');
     }, 1000);
     this.segNum = 0;
+    setTimeout(()=>{ this.loading=false}, 4000)
   }
   nextSeg() {
     console.log('nextSeg');

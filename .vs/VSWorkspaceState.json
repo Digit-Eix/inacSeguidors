@@ -3,11 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\produccio-component",
-    "\\src\\app\\progress-bar",
     "\\src\\assets",
     "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\app\\seguidorField.model.ts",
+  "SelectedNode": "\\src\\app\\produccio-component",
   "PreviewInSolutionExplorer": false
 }
