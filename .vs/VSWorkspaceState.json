@@ -3,11 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\produccio-component",
+    "\\src\\app\\configuracio-placa",
     "\\src\\app\\progress-bar",
-    "\\src\\assets",
-    "\\src\\assets\\img"
+    "\\src\\app\\seguidor-card",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\seguidorField.model.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }

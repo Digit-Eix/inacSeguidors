@@ -1,10 +1,10 @@
 export var single = [
   {
-    "name": "Germany",
+    "name": "Inv. 1",
     "value": 3.2
   },
   {
-    "name": "USA",
+    "name": "Inv. 2",
     "value": 4.5
   }
 ];

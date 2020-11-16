@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SeguidorField, Seguidor } from '../seguidorField.model';
 import { getTestBed } from '@angular/core/testing';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seguidor-card',
@@ -9,9 +10,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./seguidor-card.component.css']
 })
 export class SeguidorCardComponent implements OnInit {
+  loading: boolean = true;
   clickValue: number;
   seguidorField: SeguidorField = new SeguidorField();
-  title  = 'Ballesteros';
+  title  = 'Huerta Solar Ballesteros';
   temp: Seguidor = new Seguidor();
   // rData: any = this.getSeguidorData();
   rData: any = {};
@@ -31,19 +33,26 @@ export class SeguidorCardComponent implements OnInit {
   }
    // fi codi per mostrar el boto en Auto o Manual
 
-  constructor(private _http: HttpClient) {
+
+   gotoList() {
+      this.router.navigate(['/ConfiguracioPlaca']);
+   }
+  
+
+  constructor(private _http: HttpClient, private router:Router) {
     this.clickValue = 0;
    }
+
 
   ngOnInit() {
     console.log('ngOnInit');
     this.getSeguidorDataHttp().subscribe(data => {
       console.log('Dades PLC', data);
-      // this.rData = data;
       this.seguidorFieldDataMap(data);
      });
-    setTimeout(() => {}, 1000);
+    this.loading = false;
     this.segNum = 0;
+    console.log('call to server finalizado');
   }
   seguidorFieldDataMap(data: any) {
     this.seguidorField.spOrientacio = data.SP_Orientacio;
@@ -88,14 +97,13 @@ export class SeguidorCardComponent implements OnInit {
        ['dtlAlarmes', 'DTL_Alarmes'],
        ['potenciaInv1', 'Potencia_Inv1'],
        ['potenciaInv2', 'Potencia_Inv2']
-    ];
+      ];
       vars.forEach(v => {
         temp[v[0]] = data[`SS${i}_${v[1]}`];
       });
       this.seguidorField.seguidors.push(temp);
 
     }
-    console.log('call to server finalizado');
   }
   nextSeg() {
     console.log('nextSeg');

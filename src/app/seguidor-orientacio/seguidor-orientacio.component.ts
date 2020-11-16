@@ -19,23 +19,41 @@ export class SeguidorOrientacioComponent implements OnInit {
   minmobileWidth3: number  = 400;
   minmobileWidth4: number  = 342;
 
-    gaugeType = 'arch';
-    gaugeSize = 250;
-    gaugeMinValue = 5;
-    gaugeMaxValue = 355;
-    gaugeStyle = 'round';
-    gaugeThicknes = 15;
-    gaugeAppendText = '';
-    gaugeLabel ='';
-    gaugeAnim = true;
-    color = '#ffa828';
-  constructor() { }
-
-  ngOnInit(): void {
+  mirarMida() {
+      if (this.width >= this.maxmobileWidth) {
+        this.size = 250;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.maxmobileWidth && this.width >= this.minmobileWidth) {
+        this.size = 200;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.minmobileWidth && this.width >= this.minmobileWidth2) {
+        this.size = 150;
+        this.gaugeThicknes=15;
+      } else if (this.width <= this.minmobileWidth2 && this.width >= this.minmobileWidth3) {
+        this.size = 125;
+        this.gaugeThicknes=15;
+      }else if (this.width <= this.minmobileWidth3 && this.width >= this.minmobileWidth4) {
+        this.size = 100;
+        this.gaugeThicknes=10;
+      }else if (this.width <= this.minmobileWidth4) {
+        this.size = 75;
+        this.gaugeThicknes=10;
+      }
   }
 
 
-    onWindowResize(event) {
+   gaugeType = 'arch';
+   gaugeSize = 0;
+   gaugeMinValue = 5;
+   gaugeMaxValue = 355;
+   gaugeStyle = 'round';
+   gaugeThicknes = 15;
+   gaugeAppendText = '';
+   gaugeLabel ='';
+   gaugeAnim = true;
+   color = '#ffa828';
+
+   onWindowResize(event) {
       this.width = event.target.innerWidth;
       if (this.width >= this.maxmobileWidth) {
         this.size = 250;
@@ -58,4 +76,11 @@ export class SeguidorOrientacioComponent implements OnInit {
       }
   }
 
+
+  constructor() { }
+
+  ngOnInit(): void {
+      this.width= document.body.clientWidth;
+      this.mirarMida();
+  }
 }
