@@ -31,7 +31,11 @@ export class SeguidorCardComponent implements OnInit {
     console.log(this.clickValue);
   }
    // fi codi per mostrar el boto en Auto o Manual
-   
+
+
+   gotoList() {
+      this.router.navigate(['/ConfiguracioPlaca']);
+   }
   
 
   constructor(private _http: HttpClient, private router:Router) {
@@ -96,9 +100,9 @@ export class SeguidorCardComponent implements OnInit {
 
       }
       console.log('call to server finalizado');
+      this.loading=false;
     }, 1000);
     this.segNum = 0;
-    setTimeout(()=>{ this.loading=false}, 4000)
   }
   nextSeg() {
     console.log('nextSeg');

@@ -3,9 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\assets",
-    "\\src\\assets\\img"
+    "\\src\\app\\configuracio-placa",
+    "\\src\\app\\progress-bar",
+    "\\src\\app\\seguidor-card",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\produccio-component",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }
