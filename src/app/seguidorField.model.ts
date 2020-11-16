@@ -86,5 +86,6 @@ export class Seguidor {
     dtlAlarmes: string;
     potenciaInv1: number;
     potenciaInv2: number;
-    constructor() { }
+    constructor() {
+    }
 }

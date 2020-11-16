@@ -17,21 +17,23 @@ export class ProduccioComponentComponent {
   view2: any[] = [228, 254];
   view3: any[] = [192, 228];
   view4: any[] = [149, 223];
-  view5: any[] = [100, 173];
-  view6: any[] = [77, 150];
+  view5: any[] = [120, 193];
+  view6: any[] = [110, 180];
+  view7: any[] = [300, 275];
   legend: boolean = true;
   legendPosition: string = 'below';
 
   width: number = window.innerWidth;
   maxmobileWidth: number  = 1219;
+  maxmobileWidth2: number  = 1000;
   minmobileWidth: number  = 807;
-  minmobileWidth2: number  = 683;
+  minmobileWidth2: number  = 650;
   minmobileWidth3: number  = 549;
-  minmobileWidth4: number  = 357;
-  minmobileWidth5: number  = 280;
+  minmobileWidth4: number  = 455;
+  minmobileWidth5: number  = 360;
 
   colorScheme = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+    domain: ['#39FF33', '#39FF33']
   };
 
   constructor() {
@@ -54,17 +56,19 @@ export class ProduccioComponentComponent {
       this.width = event.target.innerWidth;
       if (this.width >= this.maxmobileWidth) {
           this.view = this.view1;
-      } else if (this.width <= this.maxmobileWidth && this.width >= this.minmobileWidth) {
+      } else if (this.width <= this.maxmobileWidth && this.width >= this.maxmobileWidth2) {
+          this.view = this.view7;
+      }else if (this.width <= this.maxmobileWidth2 && this.width >= this.minmobileWidth) {
           this.view = this.view2;
       } else if (this.width <= this.minmobileWidth && this.width >= this.minmobileWidth2) {
           this.view = this.view3;
       } else if (this.width <= this.minmobileWidth2 && this.width >= this.minmobileWidth3) {
           this.view = this.view4;
       } else if (this.width <= this.minmobileWidth3 && this.width >= this.minmobileWidth4) {
-          this.view = this.view5;
+          this.view = this.view4;
       } else if (this.width <= this.minmobileWidth4 && this.width >= this.minmobileWidth5) {
-          this.view = this.view6;
-      }else if (this.width <= this.minmobileWidth3) {
+          this.view = this.view5;
+      }else if (this.width <= this.minmobileWidth5) {
           this.view = this.view6;
       }
   }

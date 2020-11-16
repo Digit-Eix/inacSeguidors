@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SeguidorCardComponent implements OnInit {
   clickValue: number;
   seguidorField: SeguidorField = new SeguidorField();
-  title  = 'Ballesteros';
+  title  = 'Huerta Solar Ballesteros';
   temp: Seguidor = new Seguidor();
   // rData: any = this.getSeguidorData();
   rData: any = {};
