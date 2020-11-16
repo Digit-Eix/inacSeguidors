@@ -1,5 +1,7 @@
 <mat-card>
-    <mat-card-title class="day-info">{{now | date: "d"}}</mat-card-title>
-    <mat-card-subtitle class="month-info">{{now | date: "MMMM"}}</mat-card-subtitle>
-    <mat-card-content class="year-info">{{now | date: "yyyy"}}. {{now | date: "HH:MM"}} horas</mat-card-content>
+    <div class="contenidor">
+        <div class="day-info">{{now | date: "d"}}</div>
+        <div class="month-info">{{now | date: "MMMM"}}</div>
+        <div class="year-info">{{now | date: "yyyy"}}. {{now | date: "HH:MM"}} horas</div>
+    </div>
 </mat-card>

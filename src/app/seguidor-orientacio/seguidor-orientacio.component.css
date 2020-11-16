@@ -22,7 +22,7 @@
     transform: rotateY(3.142rad)rotateX(3.142rad);  }
 }
 
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 350px) {
   .gauge{
     margin-top: -20px;
     padding-bottom: 10px;

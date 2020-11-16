@@ -14,6 +14,13 @@ import { DadesGeneralsComponent } from './dades-generals/dades-generals.componen
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { SeguidorOrientacioComponent } from './seguidor-orientacio/seguidor-orientacio.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProduccioComponentComponent } from './produccio-component/produccio-component.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +28,13 @@ import { SeguidorOrientacioComponent } from './seguidor-orientacio/seguidor-orie
     SeguidorCardComponent,
     CalendarCardComponent,
     DadesGeneralsComponent,
-    SeguidorOrientacioComponent
+    SeguidorOrientacioComponent,
+    ProgressBarComponent,
+    ProduccioComponentComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatCardModule,
     MatButtonModule,
@@ -33,7 +43,9 @@ import { SeguidorOrientacioComponent } from './seguidor-orientacio/seguidor-orie
     MatProgressSpinnerModule,
     MatIconModule,
     HttpClientModule,
-    NgxGaugeModule
+    NgxGaugeModule,
+    NgxChartsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

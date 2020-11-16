@@ -1,0 +1,72 @@
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { single } from './data';
+
+@Component({
+  selector: 'app-produccio-component',
+  templateUrl: './produccio-component.component.html',
+  styleUrls: ['./produccio-component.component.css'],
+  host: {'(window:resize)':'onWindowResize($event)'}
+})
+export class ProduccioComponentComponent {
+
+  single: any[];
+  view: any[] = [345, 323];
+  view1: any[] = [345, 323];
+  view2: any[] = [228, 254];
+  view3: any[] = [192, 228];
+  view4: any[] = [149, 223];
+  view5: any[] = [100, 173];
+  view6: any[] = [77, 150];
+  legend: boolean = true;
+  legendPosition: string = 'below';
+
+  width: number = window.innerWidth;
+  maxmobileWidth: number  = 1219;
+  minmobileWidth: number  = 807;
+  minmobileWidth2: number  = 683;
+  minmobileWidth3: number  = 549;
+  minmobileWidth4: number  = 357;
+  minmobileWidth5: number  = 280;
+
+  colorScheme = {
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+  };
+
+  constructor() {
+    Object.assign(this, { single });
+  }
+
+  onSelect(data): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onWindowResize(event) {
+      this.width = event.target.innerWidth;
+      if (this.width >= this.maxmobileWidth) {
+          this.view = this.view1;
+      } else if (this.width <= this.maxmobileWidth && this.width >= this.minmobileWidth) {
+          this.view = this.view2;
+      } else if (this.width <= this.minmobileWidth && this.width >= this.minmobileWidth2) {
+          this.view = this.view3;
+      } else if (this.width <= this.minmobileWidth2 && this.width >= this.minmobileWidth3) {
+          this.view = this.view4;
+      } else if (this.width <= this.minmobileWidth3 && this.width >= this.minmobileWidth4) {
+          this.view = this.view5;
+      } else if (this.width <= this.minmobileWidth4 && this.width >= this.minmobileWidth5) {
+          this.view = this.view6;
+      }else if (this.width <= this.minmobileWidth3) {
+          this.view = this.view6;
+      }
+  }
+
+}

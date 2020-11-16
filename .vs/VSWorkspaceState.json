@@ -3,14 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\calendar-card",
-    "\\src\\app\\dades-generals",
-    "\\src\\app\\seguidor-card",
-    "\\src\\app\\seguidor-orientacio",
+    "\\src\\app\\produccio-component",
+    "\\src\\app\\progress-bar",
     "\\src\\assets",
-    "\\src\\assets\\img",
-    "\\src\\environments"
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\assets\\img\\settings-icon.png",
+  "SelectedNode": "\\src\\app\\seguidorField.model.ts",
   "PreviewInSolutionExplorer": false
 }
