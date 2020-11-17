@@ -187,14 +187,14 @@ button.next {
 }
 
 .seguidor-inclinacio .number {
-    font-size: 50px;
+    font-size: 40px;
     padding: 0.5em;
     color: black;
     opacity: 1;
     position: relative;
     z-index: 10;
-    margin-top:-60%;
-    margin-left:auto;
+    margin-top:-45%;
+    margin-left:55%;
     margin-right:15%!important;
 }
 
@@ -252,11 +252,6 @@ button.next {
   padding-top:10%;
   display: auto;
   visibility: visible;
-}
-
-.contenidor-inclinacio-mobil{
-  display: none;
-  visibility: hidden;
 }
 
 .contenidor-produccio-mobil{
@@ -330,6 +325,15 @@ button.next {
   }
 
 
+.background-custom-image{
+    width:100%;
+    padding-top: 51%;
+    background: url('/assets/img/footSeguidor.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
 @media only screen and (max-width: 1219px) and (min-width: 807px){
 .seccio-informacio-general{
   height:135px;
@@ -347,6 +351,27 @@ button.next {
     width:48px;
     height:48px;
   }
+
+  .seguidor-inclinacio .number {
+    font-size: 30px;
+    padding: 0.5em;
+    color: black;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    margin-top:-40%;
+    margin-left:55%;
+    margin-right:15%!important;
+}
+
+.background-custom-image{
+    width:100%;
+    padding-top: 51%;
+    background: url('/assets/img/footSeguidor.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
 
 }
 
@@ -389,6 +414,15 @@ button.next {
   .controlador-produccio{
     margin-top:0%;
   }
+
+  .background-custom-image{
+    width:100%;
+    padding-top: 51%;
+    background: url('/assets/img/footSeguidor.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
 }
 
 @media only screen and (max-width: 682px) and (min-width: 549px){
@@ -436,6 +470,14 @@ button.next {
     margin-top:-20%;
     height:36px!important;
   }
+.background-custom-image{
+    width:100%;
+    padding-top: 51%;
+    background: url('/assets/img/footSeguidor.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+}
 
 }
 /*Fins aqui funciona correcte*/
@@ -448,6 +490,10 @@ button.next {
 }
 .div-secundari{
   height:40px!important;
+}
+
+.imatge-inclinada-1{
+  margin-top:20%!important;
 }
 
 #dropdownMenuButton{
@@ -478,7 +524,7 @@ button.next {
 
 .seguidor-inclinacio .number {
     width:50%;
-    font-size: 20px;  
+    font-size: 15px;  
     padding: 0.5em;
     color: black;
     opacity: 16;
@@ -498,22 +544,6 @@ button.next {
     background-position: center;
 }
 
-.contenidor-inclinacio-mobil{
-  min-height: 135px!important;
-  max-height: 135px!important;
-  min-width: 100px!important;
-  padding-top:20%;
-  display: inherit;
-  visibility: visible;
-}
-
-
-.contenidor-inclinacio-web2{
-  min-height: 125px;
-  padding-top:0%;
-  display: none;
-  visibility: hidden;
-}
 
 .boto-petit{
     width:24px;
@@ -609,34 +639,18 @@ button.next {
     opacity: 1;
     position: relative;
     z-index: 10;
-    margin-top:-40%;
+    margin-top:-60%;
     margin-left:auto;
     margin-right:5%!important;
   }
 
   .background-custom-image{
     width:90%;
-    padding-top: 51%;
+    padding-top: 61%;
     background: url('/assets/img/footSeguidor.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
-}
-
-.contenidor-inclinacio-web2{
-  min-height: 90px;
-  padding-top:10%;
-  display: none;
-  visibility: hidden;
-}
-
-.contenidor-inclinacio-mobil{
-  min-height: 105px!important;
-  max-height: 105px!important;
-  min-width: 90px!important;
-  padding-top:10%;
-  display: inherit;
-  visibility: visible;
 }
 
 .titol-mobil{
@@ -661,5 +675,9 @@ button.next {
     margin-top:-70%;
     height:36px!important;
   }
+
+  .imatge-inclinada-1{
+  margin-top:0%!important;
+}
 
 }

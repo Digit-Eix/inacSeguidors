@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracioPlacaComponent implements OnInit {
 
+  title  = 'Huerta Solar Ballesteros';
+
   constructor() { }
 
   ngOnInit(): void {

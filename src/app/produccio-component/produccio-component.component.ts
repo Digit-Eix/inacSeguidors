@@ -1,7 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { single } from './data';
+//import { single } from './data';
 
 @Component({
   selector: 'app-produccio-component',
@@ -11,7 +11,7 @@ import { single } from './data';
 })
 export class ProduccioComponentComponent implements OnInit {
 
-  single: any[];
+  single: any[]=[{"name": "Inv. 1", "value": 0.1},{"name": "Inv. 2", "value": 0.0}];
   view: any[] = [345, 323];
   view1: any[] = [345, 323];
   view2: any[] = [228, 254];
@@ -59,13 +59,22 @@ export class ProduccioComponentComponent implements OnInit {
   };
 
   constructor() {
-    Object.assign(this, { single });
+    Object.assign(this.single);
   }
 
   ngOnInit(): void {
       this.width= document.body.clientWidth;
       this.mirarMida();
   }
+
+ gaugeValueFormatting = (value) => {
+        if(value <= 0){
+            return ``
+        } else{
+          return value
+        }
+        
+    };
 
   onSelect(data): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
