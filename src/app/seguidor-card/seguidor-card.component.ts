@@ -17,13 +17,14 @@ export class SeguidorCardComponent implements OnInit {
   title  = 'Huerta Solar Ballesteros';
   temp: Seguidor = new Seguidor();
   // rData: any = this.getSeguidorData();
-  rData: any = {};
+  // rData: any = {};
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
-  seguidorDataUrl = './assets/seguidorData.json';
-  //seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  // seguidorDataUrl = './assets/seguidorData.json';
+  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
+  seguidorEnviar: Seguidor;
   onClickMe() {
     if (this.clickValue === 0){
       this.clickValue = 1;
@@ -38,28 +39,22 @@ export class SeguidorCardComponent implements OnInit {
    gotoList() {
       this.router.navigate(['/ConfiguracioPlaca']);
    }
-  
-
   constructor(private _http: HttpClient, private router:Router, private shared:SharedService) {
     this.clickValue = 0;
    }
-
-   seguidorEnviar: Seguidor;
-
   ngOnInit() {
     console.log('ngOnInit');
     this.getSeguidorDataHttp().subscribe(data => {
       console.log('Dades PLC', data);
       this.seguidorFieldDataMap(data);
       console.log(this.loading);
-      this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+      this.seguidorEnviar = this.seguidorField.seguidors[this.segNum];
       this.shared.setSeguidor(this.seguidorEnviar);
       this.loading = false;
       console.log(this.loading);
      });
     this.segNum = 0;
     console.log('call to server finalizado');
-    
   }
   seguidorFieldDataMap(data: any) {
     this.seguidorField.spOrientacio = data.SP_Orientacio;
