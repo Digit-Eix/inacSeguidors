@@ -1,6 +1,5 @@
-
-g.gauge{
-  float:left!important;
+:host ::ng-deep .ng-star-inserted {
+  overflow:auto;
 }
 
 

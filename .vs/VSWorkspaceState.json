@@ -4,10 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\configuracio-placa",
+    "\\src\\app\\produccio-component",
     "\\src\\app\\progress-bar",
-    "\\src\\app\\seguidor-card",
+    "\\src\\app\\seguidor-orientacio",
+    "\\src\\app\\shared",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\produccio-component\\produccio-component.component.css",
   "PreviewInSolutionExplorer": false
 }

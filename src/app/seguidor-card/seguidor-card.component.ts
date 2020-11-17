@@ -3,6 +3,7 @@ import { SeguidorField, Seguidor } from '../seguidorField.model';
 import { getTestBed } from '@angular/core/testing';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared/shared.service';
 
 @Component({
   selector: 'app-seguidor-card',
@@ -19,8 +20,8 @@ export class SeguidorCardComponent implements OnInit {
   rData: any = {};
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
-  //seguidorDataUrl = './assets/seguidorData.json';
-  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  seguidorDataUrl = './assets/seguidorData.json';
+  //seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   onClickMe() {
@@ -39,10 +40,11 @@ export class SeguidorCardComponent implements OnInit {
    }
   
 
-  constructor(private _http: HttpClient, private router:Router) {
+  constructor(private _http: HttpClient, private router:Router, private shared:SharedService) {
     this.clickValue = 0;
    }
 
+   seguidorEnviar: Seguidor;
 
   ngOnInit() {
     console.log('ngOnInit');
@@ -50,6 +52,8 @@ export class SeguidorCardComponent implements OnInit {
       console.log('Dades PLC', data);
       this.seguidorFieldDataMap(data);
       console.log(this.loading);
+      this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+      this.shared.setSeguidor(this.seguidorEnviar);
       this.loading = false;
       console.log(this.loading);
      });
@@ -111,13 +115,19 @@ export class SeguidorCardComponent implements OnInit {
     console.log('nextSeg');
     this.segNum++;
     this.segNum = this.segNum % this.seguidorField.seguidors.length;
+    this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+    this.shared.setSeguidor(this.seguidorEnviar);
+    setTimeout(() => {  this.shared.sendClickEvent(); }, 100);    
   }
   prevSeg() {
     console.log('prevSeg');
-    this.segNum--;
+    this.segNum--;    
     this.segNum = ((this.segNum + this.seguidorField.seguidors.length)
           % this.seguidorField.seguidors.length)
           % this.seguidorField.seguidors.length;
+    this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+    this.shared.setSeguidor(this.seguidorEnviar);
+    setTimeout(() => {  this.shared.sendClickEvent(); }, 100); 
   }
   getSeguidorDataHttp() {
     const headers = new HttpHeaders({

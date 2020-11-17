@@ -1,7 +1,9 @@
 import { Component, OnInit, NgModule } from '@angular/core';
+import { SeguidorField, Seguidor } from '../seguidorField.model';
+import { SharedService } from '../shared/shared.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-//import { single } from './data';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-produccio-component',
@@ -11,7 +13,11 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 })
 export class ProduccioComponentComponent implements OnInit {
 
-  single: any[]=[{"name": "Inv. 1", "value": 0.1},{"name": "Inv. 2", "value": 0.0}];
+  clickEventSubscription:Subscription;
+  potencia1: number = 0.0;
+  potencia2: number = 0.0;
+
+  single: any[]=[{"name": "Inv. 1", "value": this.potencia1},{"name": "Inv. 2", "value": this.potencia2}];
   view: any[] = [345, 323];
   view1: any[] = [345, 323];
   view2: any[] = [228, 254];
@@ -52,19 +58,35 @@ export class ProduccioComponentComponent implements OnInit {
           this.view = this.view6;
       }
   }
+  seguidorRebut:Seguidor;
 
 
   colorScheme = {
     domain: ['#39FF33', '#39FF33']
   };
 
-  constructor() {
-    Object.assign(this.single);
+  constructor(private shared:SharedService) {
+      this.clickEventSubscription = this.shared.getClickEvent().subscribe(()=>{
+        this.update();
+      })
   }
+
+  update() {
+       this.ngOnInit();
+  } 
 
   ngOnInit(): void {
       this.width= document.body.clientWidth;
       this.mirarMida();
+      this.seguidorRebut = this.shared.getSeguidor();
+      setTimeout(() => {  this.potencia2=this.seguidorRebut.potenciaInv2/1000; }, 100);
+      setTimeout(() => {  this.potencia1=this.seguidorRebut.potenciaInv1/1000; }, 100);
+      setTimeout(() => {  this.single=[{"name": "Inv. 1", "value": this.potencia1},{"name": "Inv. 2", "value": this.potencia2}];; }, 100);
+      setTimeout(() => {  Object.assign(this.single); }, 100);
+      setTimeout(() => {  console.log(this.seguidorRebut); }, 100);
+      
+      
+      
   }
 
  gaugeValueFormatting = (value) => {
