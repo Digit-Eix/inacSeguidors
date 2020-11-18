@@ -21,9 +21,9 @@ export class SeguidorCardComponent implements OnInit {
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
 
-  //seguidorDataUrl = './assets/seguidorData.json';
+  seguidorDataUrl = './assets/seguidorData.json';
 
-  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  // seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   seguidorEnviar: Seguidor;
@@ -100,7 +100,9 @@ export class SeguidorCardComponent implements OnInit {
        ['alarmes', 'Alarmes'],
        ['dtlAlarmes', 'DTL_Alarmes'],
        ['potenciaInv1', 'Potencia_Inv1'],
-       ['potenciaInv2', 'Potencia_Inv2']
+       ['potenciaInv2', 'Potencia_Inv2'],
+       ['potenciaDiariaInv1', 'Potencia_Diaria_Inv1'],
+       ['potenciaDiariaInv2', 'Potencia_Diaria_Inv2']
       ];
       vars.forEach(v => {
         temp[v[0]] = data[`SS${i}_${v[1]}`];
