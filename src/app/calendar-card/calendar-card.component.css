@@ -64,6 +64,7 @@ mat-card{
 mat-card{
   padding-top:10px!important;
   padding-bottom:10px!important;
+  margin-left:0px!important;
 }
 }
 @media only screen and (max-width: 356px) and (min-width: 100px){

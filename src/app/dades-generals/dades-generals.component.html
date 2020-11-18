@@ -1,58 +1,32 @@
 <div class="mida-lletra" style="width:100%;font-size:20px; height:auto; min-height: 100% !important; text-align:center;">
-    <mat-card style="width:25%; float:left; margin-right:0px!important;padding-top:5px!important; padding-bottom:5px!important;">
-        <div style="width:70%; float:left;">
-            SP Orientación:
+    <mat-card style="width:30%; float:left; margin-right:0px!important;padding-top:5px!important; padding-bottom:5px!important;">
+        <div style="width:70%; float:left; text-align:left;">
+            Orientación:
         </div>
-        <div>
+        <div class="mida-lletra-2" style="width:30%; float:left;  text-align:center;">
             {{seguidor.spOrientacio|number:'1.0-0'}}&deg;
         </div>
     </mat-card>
-    <mat-card style="width:25%; float:left; margin-right:0px!important; padding-top:5px!important; padding-bottom:5px!important;">
-        <div style="width:70%; float:left;">
-            SP Inclinación:
+    <mat-card style="width:30%; float:left; margin-right:0px!important; padding-top:5px!important; padding-bottom:5px!important;">
+        <div style="width:70%; float:left;text-align:left;">
+            Inclinación:
         </div>
-        <div>
+        <div class="mida-lletra-2" style="width:30%; float:left;  text-align:center;">
             {{seguidor.spInclinacio|number:'1.0-0'}}&deg;
         </div>
     </mat-card>
-    <mat-card style="width:25%; float:left; margin-right:0px!important;padding-top:5px!important; padding-bottom:5px!important;">
-        <div style="width:50%; float:left;">
+    <mat-card style="width:30%; float:left; margin-right:0px!important;padding-top:5px!important; padding-bottom:5px!important;">
+        <div style="width:45%; float:left; text-align:left;">
             Viento:
         </div>
-        <div style="width:50%; float:left;">
-            {{seguidor.ventActual|number:'1.0-0'}} Km/h
+        <div class="mida-lletra-2" style="width:55%; float:left; text-align:center;">
+            {{seguidor.ventActual|number:'1.0-0'}}Km/h
         </div>
         
     </mat-card>
-    <div style="float:left; margin-left:5px!important;">
-        <img class="alerta-vent-img " src="/assets/img/alert-danger-petit.png" />
+    <div class="imatge-alarma" style="float:left; margin-left:5px!important;">
+        <img *ngIf="seguidor.alarmaVent==1" class="alerta-vent-img " src="/assets/img/alert-danger-petit.png" />
     </div>
 </div>
 
-
-<!--
-<table class="table mida-lletra">
-    <tbody>
-        <tr>
-            <th scope="row">SP Orientación:</th>
-            <td>{{seguidor.spOrientacio|number:'1.0-0'}}&deg;</td>
-        </tr>
-        <tr>
-            <th scope="row">SP Inclinación:</th>
-            <td>{{seguidor.spInclinacio|number:'1.0-0'}}&deg;</td>
-        </tr>
-        <tr>
-            <th scope="row">Viento:</th>
-            <td>{{seguidor.ventActual|number:'1.0-0'}} Km/h</td>
-        </tr>
-</table>
-
-<ul class="list-group list-group-horizontal mida-lletra">
-    <li class="list-group-item bold">{{seguidor.ssGeneral}}</li>
-    <li class="list-group-item">{{seguidor.estatGeneral|number:'1.0-0'}}</li>
-    <li class="list-group-item">{{seguidor.rdOrientacioGeneral|number:'1.0-0'}}</li>
-    <li class="list-group-item">{{seguidor.rdInclinacioGeneral|number:'1.0-0'}}</li>
-    <li class="list-group-item">{{seguidor.alarmesGeneral|number:'1.0-0'}}</li>
-
-</ul>
--->
+<!--*ngIf="seguidor.alarmaVent==1"-->

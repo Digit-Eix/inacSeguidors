@@ -82,11 +82,7 @@ export class ProduccioComponentComponent implements OnInit {
       setTimeout(() => {  this.potencia2=this.seguidorRebut.potenciaInv2/1000; }, 100);
       setTimeout(() => {  this.potencia1=this.seguidorRebut.potenciaInv1/1000; }, 100);
       setTimeout(() => {  this.single=[{"name": "Inv. 1", "value": this.potencia1},{"name": "Inv. 2", "value": this.potencia2}];; }, 100);
-      setTimeout(() => {  Object.assign(this.single); }, 100);
-      setTimeout(() => {  console.log(this.seguidorRebut); }, 100);
-      
-      
-      
+      setTimeout(() => {  Object.assign(this.single); }, 100);     
   }
 
  gaugeValueFormatting = (value) => {

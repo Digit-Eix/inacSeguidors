@@ -20,8 +20,8 @@ export class SeguidorCardComponent implements OnInit {
   rData: any = {};
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
-  seguidorDataUrl = './assets/seguidorData.json';
-  //seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  //seguidorDataUrl = './assets/seguidorData.json';
+  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   onClickMe() {

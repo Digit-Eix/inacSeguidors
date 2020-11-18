@@ -63,7 +63,7 @@
                   <button type="button" class="btn btn-light next" (click)="nextSeg()">></button>
             </div>
         </div>
-        <div style="width:100%!important; display:flex; margin-top:10px; padding-top:10px; max-width:1150px!important; margin: 10px auto!important;">
+        <div style="width:100%!important; display:flex; max-width:1150px!important;">
             <div class="contenidor-petit">
                     <h4 class="text-center titol-mobil">Orientación</h4>
                     <div class="contenidor-inclinacio-web card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em;">
@@ -74,7 +74,7 @@
                     </div>
             </div>
             <div class="contenidor-petit">
-                    <h4 class="text-center titol-mobil">Inclicación</h4>
+                    <h4 class="text-center titol-mobil">Inclinación</h4>
                     <div class="contenidor-inclinacio-web contenidor-inclinacio-web2 text-center card rounded border border-warning shadow ">
                           <div>
                                   <img class="imatge-inclinada-1 mx-auto d-block flex-auto" width="40%" src="/assets/img/headSeguidor.png" alt="cap del seguidor" style="float: inline-start;transform:rotate(-{{seguidorField.seguidors[segNum].rdInclinacio}}deg); 
@@ -99,10 +99,10 @@
                             </div>
                     </div>
                     <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow mida-inv" style="text-align:center;margin-left:auto!important; margin-right:auto!important; padding:0px!important;">
-                                   Inv.1: {{seguidorField.seguidors[segNum].potenciaInv1/1000}}kW
+                                   Inv1: {{seguidorField.seguidors[segNum].potenciaInv1/1000}}kW
                     </div>
                     <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow mida-inv" style="text-align:center;margin-left:auto!important; margin-right:auto!important; padding:0px!important;">
-                                   Inv.2: {{seguidorField.seguidors[segNum].potenciaInv2/1000}}kW
+                                   Inv2: {{seguidorField.seguidors[segNum].potenciaInv2/1000}}kW
                                    
                     </div>
             </div>
@@ -126,18 +126,23 @@
                   </div>
             </div>
             <div class='calcul-distancies' style="width:50%;margin:1.5%!important; padding:0px 1.5%!important;">
-                     <div class="card border-warning mb-3 mida-div">                                   
-                     <div class="card-header tamany-reduit mida-lletra-text padding-reduit" style="text-align: center;">{{ "Alarmas" | uppercase }}
-                            <span class="float-right">
+                     <div class="card border-warning mb-3 mida-div" style="margin-bottom:0px!important;">                                   
+                     <div class="card-header tamany-reduit mida-lletra-text padding-reduit" style="text-align: center; padding:0px!important;">
+                            <div class="card-body mida-lletra-text float-left contenidor-alarmes" style="text-align: center; padding:5px 0px!important;width:33%;">
+                                  {{ "Alarmas" | uppercase }}
+                            </div>
+                            <div class=" card-body mida-lletra-text float-left contenidor-alarmes" style="text-align: center; padding:5px 0px!important;width:33%;">
+                                  <p class="card-title tamany-reduit mida-lletra-text">{{seguidorField.seguidors[segNum].alarmes}}</p>
+                                  <p class="card-text tamany-reduit">{{seguidorField.seguidors[segNum].dtlAlarmes|slice:15:23}}</p>
+                            </div>
+                            <div class="card-body mida-lletra-text float-left contenidor-alarmes contenidor-alarmes2" style="text-align: center; padding:5px 0px!important;width:33%;">
                                   <button type="button" class="btn btn-warning" aria-label="Icon button to refresh alarms">
-                                         <mat-icon class="fas fa-sync"></mat-icon>
+                                         <mat-icon class="fas fa-sync" style="display: flex; align-items: center; justify-content: center;"></mat-icon>
                                   </button>
-                            </span>
+                            </div>
+                            
                      </div>
-                     <div class="card-body text-warning mida-lletra-text" >
-                            <h5 class="card-title tamany-reduit mida-lletra-text">{{seguidorField.seguidors[segNum].alarmes}}</h5>
-                             <p class="card-text tamany-reduit">{{seguidorField.seguidors[segNum].dtlAlarmes|slice:15:23}}</p>
-                     </div>
+                     
              </div>
         </div>
     </div>

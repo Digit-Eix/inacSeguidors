@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbProgressbarConfig} from '@ng-bootstrap/ng-bootstrap';
+import { SeguidorField, Seguidor } from '../seguidorField.model';
+import { SharedService } from '../shared/shared.service';
+
 
 @Component({
   selector: 'app-progress-bar',
@@ -11,7 +14,7 @@ export class ProgressBarComponent implements OnInit {
   constructor(config: NgbProgressbarConfig) {
 
     /*Substituir per valor màxim possible*/
-    config.max = 1000;
+    config.max = 110;
     config.striped = true;
     config.animated = true;
     config.type = 'success';

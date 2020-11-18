@@ -377,10 +377,14 @@ button.next {
 
 @media only screen and (max-width: 806px) and (min-width: 683px){
 .seccio-informacio-general{
-  height:135px;
+  height:115px;
   display:in-line block;
   overflow:visible;
 }
+.div-secundari{
+  height:60px!important;
+}
+
 .contenidor-inclinacio-web{
   min-height: 225px!important;
   max-height: 225px!important;
@@ -484,12 +488,26 @@ button.next {
 
 @media only screen and (max-width: 548px) and (min-width: 357px){
 .seccio-informacio-general{
-  height:135px;
+  height:110px;
   display:in-line block;
   overflow:visible;
 }
 .div-secundari{
-  height:40px!important;
+  height:60px!important;
+}
+
+.mida-lletra-text{
+  font-size:12px!important;
+}
+
+.contenidor-alarmes{
+  text-align: center;
+  padding:5px 0px!important;
+  width:49%!important;
+}
+
+.contenidor-alarmes2{
+  margin-top:-18%!important;
 }
 
 .imatge-inclinada-1{
@@ -524,7 +542,7 @@ button.next {
 
 .seguidor-inclinacio .number {
     width:50%;
-    font-size: 15px;  
+    font-size: 20px;  
     padding: 0.5em;
     color: black;
     opacity: 16;
@@ -573,12 +591,16 @@ button.next {
 
 @media only screen and (max-width: 356px) and (min-width: 100px){
 .seccio-informacio-general{
-  height:115px;
+  height:105px;
   display:in-line block;
   overflow:visible;
 }
 .div-secundari{
-  height:40px!important;
+  height:60px!important;
+}
+
+.contenidor-alarmes2{
+    margin-top:-25px;
 }
 
 .mida-lletra-titol2{
@@ -601,6 +623,13 @@ button.next {
   .mida-lletra-text{
     font-size:12px!important;
 }
+
+.contenidor-alarmes{
+  text-align: center;
+  padding: 5px 0px!important;
+  width:49%!important;
+}
+
 
 .padding-reduit{
   padding:3px;
