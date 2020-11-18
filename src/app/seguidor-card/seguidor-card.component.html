@@ -95,7 +95,7 @@
                     <div class="contenidor-inclinacio-web card rounded border border-warning shadow m-auto align-content-center" style="margin-right: 5px; border-radius: 1em; text-align:center; padding-top:0%;">
                             <app-produccio-component class="controlador-produccio"></app-produccio-component>
                             <div class="text-lg-center uk-text-bold  border border-warning rounded shadow mida-inv posicioProdDiaria" style="text-align:center;margin-left:auto!important; margin-right:auto!important; padding:0px!important; width:90%;">
-                                   Producción diaria: {{seguidorField.seguidors[segNum].potenciaInv2/1000}}kW     
+                                   Producción diaria: {{(seguidorField.seguidors[segNum].potenciaDiariaInv1+seguidorField.seguidors[segNum].potenciaDiariaInv1)/1000}}kW     
                             </div>
                     </div>
                     <div class="text-lg-center uk-text-bold m-3 col-9 border border-warning rounded shadow mida-inv" style="text-align:center;margin-left:auto!important; margin-right:auto!important; padding:0px!important;">

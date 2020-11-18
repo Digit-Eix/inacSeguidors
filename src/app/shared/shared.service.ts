@@ -7,8 +7,17 @@ import { Observable, Subject } from 'rxjs';
 })
 export class SharedService {
   seguidorMostrar: Seguidor;
+  dades_seguidors: SeguidorField;
   private subject = new Subject<any>();
   constructor() { }
+
+  setDadesSegudidors(dades){
+    this.dades_seguidors=dades
+  }
+
+  getDadesSegudiors(){
+    return this.dades_seguidors
+  }
 
   setSeguidor(dades){
     this.seguidorMostrar=dades

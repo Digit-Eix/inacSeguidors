@@ -59,6 +59,7 @@ export class ProduccioComponentComponent implements OnInit {
       }
   }
   seguidorRebut:Seguidor;
+  
 
 
   colorScheme = {

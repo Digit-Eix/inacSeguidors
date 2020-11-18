@@ -3,13 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\configuracio-placa",
-    "\\src\\app\\produccio-component",
+    "\\src\\app\\calendar-card",
     "\\src\\app\\progress-bar",
-    "\\src\\app\\seguidor-orientacio",
     "\\src\\app\\shared",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\produccio-component\\produccio-component.component.css",
+  "SelectedNode": "\\src\\app\\progress-bar\\progress-bar.component.ts",
   "PreviewInSolutionExplorer": false
 }

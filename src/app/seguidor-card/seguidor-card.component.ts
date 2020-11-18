@@ -27,6 +27,7 @@ export class SeguidorCardComponent implements OnInit {
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   seguidorEnviar: Seguidor;
+
   onClickMe() {
     if (this.clickValue === 0){
       this.clickValue = 1;
@@ -52,6 +53,7 @@ export class SeguidorCardComponent implements OnInit {
       console.log(this.loading);
       this.seguidorEnviar = this.seguidorField.seguidors[this.segNum];
       this.shared.setSeguidor(this.seguidorEnviar);
+      this.shared.setDadesSegudidors(this.seguidorField);
       this.loading = false;
       console.log(this.loading);
      });
