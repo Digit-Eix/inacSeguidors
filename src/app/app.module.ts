@@ -17,7 +17,7 @@ import { SeguidorOrientacioComponent } from './seguidor-orientacio/seguidor-orie
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProduccioComponentComponent } from './produccio-component/produccio-component.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-placa.component';
@@ -48,6 +48,8 @@ import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-pl
     NgxGaugeModule,
     NgxChartsModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

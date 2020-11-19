@@ -3,11 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\calendar-card",
-    "\\src\\app\\progress-bar",
-    "\\src\\app\\shared",
-    "\\src\\assets"
+    "\\src\\app\\configuracio-placa",
+    "\\src\\app\\seguidor-card",
+    "\\src\\assets",
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\app\\progress-bar\\progress-bar.component.ts",
+  "SelectedNode": "\\src\\assets\\img\\exit-icon.png",
   "PreviewInSolutionExplorer": false
 }

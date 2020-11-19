@@ -175,17 +175,6 @@ button.next {
     transform: rotate(5deg);
 }
 
-.number-seguidor-orientacio-web {
-    text-align:center;
-    position: relative;
-    font-size: 60px;
-    font-weight: bolder;
-    padding: 0.5em;
-    color: black;
-    
-    margin-top:-50%;
-}
-
 .seguidor-inclinacio .number {
     font-size: 40px;
     padding: 0.5em;
@@ -252,16 +241,6 @@ button.next {
   padding-top:10%;
   display: auto;
   visibility: visible;
-}
-
-.contenidor-produccio-mobil{
-  display: none;
-  visibility: hidden;
-}
-
-.seguidor-orientacio-mobil{
-  display: none;
-  visibility: hidden;
 }
 
 .seguidor-orientacio-web{
@@ -496,6 +475,12 @@ button.next {
   height:60px!important;
 }
 
+.informacio-3{
+  margin-top:5px!important;
+  float:left;
+  width:10%;
+}
+
 .mida-lletra-text{
   font-size:12px!important;
 }
@@ -545,7 +530,7 @@ button.next {
     font-size: 20px;  
     padding: 0.5em;
     color: black;
-    opacity: 16;
+    opacity: 1;
     position: relative;
     z-index: 10;
     margin-top:-50%;
@@ -597,6 +582,11 @@ button.next {
 }
 .div-secundari{
   height:60px!important;
+}
+.informacio-3{
+  margin-top:5px!important;
+  float:left;
+  width:10%;
 }
 
 .contenidor-alarmes2{

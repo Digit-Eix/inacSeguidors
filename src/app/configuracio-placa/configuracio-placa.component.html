@@ -9,31 +9,142 @@
     </div>
 </mat-card>
 
-<mat-card class="weather-card" style="margin-top:15px!important; width:95%; margin-left:auto!important; margin-right:auto!important;">
+<mat-card class="weather-card" style="margin-top:15px!important; width:95%; margin-left:auto!important; margin-right:auto!important; padding-bottom:0px!important;">
     <mat-card-content>
          <div class="contenidor-formulari">              
               <div class="contenidor1">
-                  <h5>Configuración SS-1</h5>
-                  <div>
-                      <div>Correción</div>
-                      <div>3,00º</div>
+                  <h5>Configuración {{seguidorRebut.nom}}</h5>
+                  <div style="width:100%; height:40px; margin:0px!important;">
+                    <div class="shadow" style="width:49%; height:30px;border:1px solid #ffa828; border-radius:5px;">
+                      <div class="casella_dades contingut2" style="padding-top:5px;padding-bottom:5px;padding-left:10px;">
+                            Correción
+                      </div>
+                      <div class="input_dades contingut2" style="padding-top:5px; padding-bottom:5px;padding-left:10px;">
+                            3,00º
+                      </div>
+                      
+                    </div>
+                    <span class="float-right" style="margin-top:-30px">
+                             <button class="boto-petit" (click)="gotoList()"style="padding:0px!important;" mat-mat-icon-button mat-raised-button>
+                                  <img class="boto-petit" src="/assets/img/exit-icon-petit.png" />
+                             </button>
+                      </span>
                   </div>
+                  
               </div>
               <div class="contenidor2">
-                    <div class="sub-contenidor1">
+                    <div class="contenidor2">
                           <div class="titol">
-                              Orientación
+                                Orientación
                           </div>
-                          <div class="contingut">
+                          <div class="titol">
+                                Inclinación
                           </div>
                     </div>
-                    <div class="subcontenidor2">
-                          <div class="titol">
-                              Inclinación
+                    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+                                  <div class="subcontenidor1 card rounded border border-warning shadow m-auto align-content-center">
+                                        <div class="contingut">
+                                              <div class="limites">
+                                                     <div class="titol2">
+                                                          Límites
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Limit_Orientacio_Maxim" formControlName="Limit_Orientacio_Maxim" name="Limit_Orientacio_Maxim" placeholder="{{seguidorRebut.limitOrientacioMaxim}}º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Limit_Orientacio_Minim" formControlName="Limit_Orientacio_Minim" name="Limit_Orientacio_Minim" placeholder="{{seguidorRebut.limitOrientacioMinim}}º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                              <div class="entradaAnalogica">
+                                                    <div class="titol2">
+                                                          Entrada Analógica
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Entrada_Max_Orient" formControlName="Entrada_Max_Orient" name="Entrada_Max_Orient" placeholder="{{seguidorRebut.entradaMaxOrientacio}} º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Entrada_Min_Orient" formControlName="Entrada_Min_Orient" name="Entrada_Min_Orient" placeholder="{{seguidorRebut.sortidaMinOrientacio}} º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                              <div class="salidaEscalada">
+                                                    <div class="titol2">
+                                                          Salida Escalada
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Sortida_Max_Orient" formControlName="Sortida_Max_Orient" name="Sortida_Max_Orient" placeholder="{{seguidorRebut.sortidaMaxOrientacio}} º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Sortida_Min_Orient" formControlName="Sortida_Min_Orient" name="Sortida_Min_Orient" placeholder="{{seguidorRebut.limitInclinacioMaxim}} º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                        </div>
+                                  </div>
+                                  <div class="subcontenidor2 card rounded border border-warning shadow m-auto align-content-center">                          
+                                        <div class="congingut">
+                                              <div class="limites">
+                                                    <div class="titol2">
+                                                          Límites
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Limit_Inclinacio_Maxim" formControlName="Limit_Inclinacio_Maxim" name="Limit_Inclinacio_Maxim" placeholder="{{seguidorRebut.limitInclinacioMaxim}} º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Limit_Inclinacio_Minim" formControlName="Limit_Inclinacio_Minim" name="Limit_Inclinacio_Minim" placeholder="{{seguidorRebut.limitInclinacioMinim}} º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                              <div class="entradaAnalogica">
+                                                    <div class="titol2">
+                                                          Entrada Analógica
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Entrada_Max_Incl" formControlName="Entrada_Max_Incl" name="Entrada_Max_Incl" placeholder="{{seguidorRebut.entradaMaxInclinacio}} º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Entrada_Min_Incl" formControlName="Entrada_Min_Incl" name="Entrada_Min_Incl" placeholder="{{seguidorRebut.entradaMinInclinacio}} º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                              <div class="salidaEscalada">
+                                                    <div class="titol2">
+                                                          Salida Escalada
+                                                    </div>
+                                                    <div class="contingut2">
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Máximo</div>
+                                                                <input class="input_dades" type="number" id="Sortida_Max_Incl" formControlName="Sortida_Max_Incl" name="Sortida_Max_Incl" placeholder="{{seguidorRebut.sortidaMaxInclinacio}} º">
+                                                          </div>
+                                                          <div class="fila_dades">
+                                                                <div class="casella_dades">Mínimo</div>
+                                                                <input class="input_dades" type="number" id="Sortida_Min_Incl" formControlName="Sortida_Min_Incl" name="Sortida_Min_Incl" placeholder="{{seguidorRebut.sortidaMinInclinacio}} º">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                        </div>
+                                  </div>
+                          <div style="text-align:center;">        
+                              <button class="button " style="margin:10px;" mat-mat-icon-button mat-raised-button type="submit">GUARDAR</button>
                           </div>
-                          <div class="congingut">
-                          </div>
-                    </div>
+                    </form>
+                    
               </div>
          </div>
     </mat-card-content>
