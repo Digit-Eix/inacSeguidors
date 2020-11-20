@@ -36,7 +36,6 @@ export class ConfiguracioGeneralComponent implements OnInit {
         color: 'black',
         text: ' ',
       },
-      options: { animation: google.maps.Animation.STATIC },
     })
   }
 
