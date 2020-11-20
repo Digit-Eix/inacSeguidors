@@ -21,9 +21,9 @@ export class SeguidorCardComponent implements OnInit {
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
 
-  seguidorDataUrl = './assets/seguidorData.json';
+  // seguidorDataUrl = './assets/seguidorData.json';
 
-  // seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   seguidorEnviar: Seguidor;
@@ -42,7 +42,7 @@ export class SeguidorCardComponent implements OnInit {
    gotoList() {
       this.router.navigate(['/ConfiguracioPlaca']);
    }
-  constructor(private _http: HttpClient, private router:Router, private shared:SharedService) {
+  constructor(private _http: HttpClient, private router: Router, private shared: SharedService) {
     this.clickValue = 0;
    }
   ngOnInit() {
@@ -116,19 +116,19 @@ export class SeguidorCardComponent implements OnInit {
     console.log('nextSeg');
     this.segNum++;
     this.segNum = this.segNum % this.seguidorField.seguidors.length;
-    this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+    this.seguidorEnviar = this.seguidorField.seguidors[this.segNum];
     this.shared.setSeguidor(this.seguidorEnviar);
-    setTimeout(() => {  this.shared.sendClickEvent(); }, 100);    
+    setTimeout(() => {  this.shared.sendClickEvent(); }, 100);
   }
   prevSeg() {
     console.log('prevSeg');
-    this.segNum--;    
+    this.segNum--;
     this.segNum = ((this.segNum + this.seguidorField.seguidors.length)
           % this.seguidorField.seguidors.length)
           % this.seguidorField.seguidors.length;
-    this.seguidorEnviar=this.seguidorField.seguidors[this.segNum];
+    this.seguidorEnviar = this.seguidorField.seguidors[this.segNum];
     this.shared.setSeguidor(this.seguidorEnviar);
-    setTimeout(() => {  this.shared.sendClickEvent(); }, 100); 
+    setTimeout(() => {  this.shared.sendClickEvent(); }, 100);
   }
   getSeguidorDataHttp() {
     const headers = new HttpHeaders({
