@@ -21,7 +21,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-placa.component';
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { ConfiguracioGeneralComponent } from './configuracio-general/configuracio-general.component';
+import { GoogleMapsModule } from '@angular/google-maps'
 
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -33,6 +43,7 @@ import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-pl
     ProgressBarComponent,
     ProduccioComponentComponent,
     ConfiguracioPlacaComponent,
+    ConfiguracioGeneralComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +61,14 @@ import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-pl
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    GoogleMapsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

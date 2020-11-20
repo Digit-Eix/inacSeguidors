@@ -38,7 +38,10 @@ export class ConfiguracioPlacaComponent implements OnInit {
   }
 
   onSubmit(customerData) {
+    //descomentar linia de sota si es vol resetejar el formulari despres de guardar els canvis
     //this.checkoutForm.reset();
+
+    //falta processar les dades modificades del seguidor 
     console.warn('Your order has been submitted', customerData);
   }
 

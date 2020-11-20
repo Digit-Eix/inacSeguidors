@@ -175,18 +175,6 @@ button.next {
     transform: rotate(5deg);
 }
 
-.seguidor-inclinacio .number {
-    font-size: 40px;
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-45%;
-    margin-left:55%;
-    margin-right:15%!important;
-}
-
 :host /deep/ .mat-progress-spinner circle,
 .mat-spinner circle,
 .orientation-spinner circle {
@@ -313,6 +301,15 @@ button.next {
     background-position: center;
 }
 
+.number{
+  font-size:35px;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:right;
+  margin-top:-40%;
+}
+
 @media only screen and (max-width: 1219px) and (min-width: 807px){
 .seccio-informacio-general{
   height:135px;
@@ -330,18 +327,6 @@ button.next {
     width:48px;
     height:48px;
   }
-
-  .seguidor-inclinacio .number {
-    font-size: 30px;
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-40%;
-    margin-left:55%;
-    margin-right:15%!important;
-}
 
 .background-custom-image{
     width:100%;
@@ -375,18 +360,6 @@ button.next {
 }
 .mida-lletra-text{
   font-size:15px!important;
-}
-.seguidor-inclinacio .number {
-    width:50%;
-    font-size: 40px;
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-40%;
-    margin-left:auto;
-    margin-right:5%!important;
 }
 
 .boto-petit{
@@ -425,19 +398,6 @@ button.next {
 }
 .mida-lletra-text{
   font-size:15px!important;
-}
-
-.seguidor-inclinacio .number {
-    width:50%;
-    font-size: 35px;
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-40%;
-    margin-left:auto;
-    margin-right:5%!important;
 }
 
 .boto-petit{
@@ -525,19 +485,6 @@ button.next {
   padding:3px;
 }
 
-.seguidor-inclinacio .number {
-    width:50%;
-    font-size: 20px;  
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-50%;
-    margin-left:auto;
-    margin-right:5%!important;
-  }
-
 .background-custom-image{
     width:100%;
     padding-top: 51%;
@@ -547,6 +494,14 @@ button.next {
     background-position: center;
 }
 
+.number{
+  font-size:25px;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:right;
+  margin-top:-40%;
+}
 
 .boto-petit{
     width:24px;
@@ -650,26 +605,22 @@ button.next {
   float:left;
 }
 
-.seguidor-inclinacio .number {
-    width:50%;
-    font-size: 15px;
-    padding: 0.5em;
-    color: black;
-    opacity: 1;
-    position: relative;
-    z-index: 10;
-    margin-top:-60%;
-    margin-left:auto;
-    margin-right:5%!important;
-  }
-
-  .background-custom-image{
+.background-custom-image{
     width:90%;
     padding-top: 61%;
     background: url('/assets/img/footSeguidor.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position: center;
+}
+
+.number{
+  font-size:25px;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:right;
+  margin-top:-50%;
 }
 
 .titol-mobil{

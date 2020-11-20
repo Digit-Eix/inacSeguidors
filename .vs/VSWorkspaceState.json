@@ -5,9 +5,8 @@
     "\\src\\app",
     "\\src\\app\\configuracio-placa",
     "\\src\\app\\seguidor-card",
-    "\\src\\assets",
-    "\\src\\assets\\img"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\assets\\img\\exit-icon.png",
+  "SelectedNode": "\\src\\main.ts",
   "PreviewInSolutionExplorer": false
 }
