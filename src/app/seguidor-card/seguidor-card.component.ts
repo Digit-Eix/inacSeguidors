@@ -5,6 +5,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared/shared.service';
 
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-seguidor-card',
   templateUrl: './seguidor-card.component.html',
@@ -27,7 +32,7 @@ export class SeguidorCardComponent implements OnInit {
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   seguidorEnviar: Seguidor;
-
+  eventText = '';
   onClickMe() {
     if (this.clickValue === 0){
       this.clickValue = 1;
@@ -38,16 +43,32 @@ export class SeguidorCardComponent implements OnInit {
   }
    // fi codi per mostrar el boto en Auto o Manual
 
+  onSwipe(evt) {
+      const x = Math.abs(evt.deltaX) > 40 ? (evt.deltaX > 0 ? 'right' : 'left') : '';
+      const y = Math.abs(evt.deltaY) > 40 ? (evt.deltaY > 0 ? 'down' : 'up') : '';
+
+      console.log(this.eventText += `${x} ${y}<br/>`);
+  }
 
    gotoList() {
       this.router.navigate(['/ConfiguracioPlaca']);
    }
-  constructor(private _http: HttpClient, private router: Router, private shared: SharedService) {
+
+   gotoConfig(){
+      this.router.navigate(['/ConfiguracioGeneral']);
+   }
+
+   restartDades(){
+      this.ngOnInit();
+   }
+
+   constructor(private _http: HttpClient, private router: Router, private shared: SharedService) {
     this.clickValue = 0;
    }
   ngOnInit() {
-    console.log('ngOnInit');
-    this.getSeguidorDataHttp().subscribe(data => {
+  this.loading = true;
+  console.log('ngOnInit');
+  this.getSeguidorDataHttp().subscribe(data => {
       console.log('Dades PLC', data);
       this.seguidorFieldDataMap(data);
       console.log(this.loading);
@@ -57,8 +78,8 @@ export class SeguidorCardComponent implements OnInit {
       this.loading = false;
       console.log(this.loading);
      });
-    this.segNum = 0;
-    console.log('call to server finalizado');
+  this.segNum = 0;
+  console.log('call to server finalizado');
   }
   seguidorFieldDataMap(data: any) {
     this.seguidorField.spOrientacio = data.SP_Orientacio;
