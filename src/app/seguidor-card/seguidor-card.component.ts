@@ -4,11 +4,8 @@ import { getTestBed } from '@angular/core/testing';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared/shared.service';
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import * as Hammer from 'hammerjs';
-import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-seguidor-card',
@@ -26,9 +23,9 @@ export class SeguidorCardComponent implements OnInit {
   segNum: number;
   // seguidorDataUrl ='https://vpn-v2.myrex24.net/ProvaOficina20201013@inacsl/web/webserver';
 
-  // seguidorDataUrl = './assets/seguidorData.json';
+  seguidorDataUrl = './assets/seguidorData.json';
 
-  seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
+  //seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
   // inici codi per mostrar el boto en Auto o Manual
   // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
   seguidorEnviar: Seguidor;
@@ -43,12 +40,21 @@ export class SeguidorCardComponent implements OnInit {
   }
    // fi codi per mostrar el boto en Auto o Manual
 
-  onSwipe(evt) {
-      const x = Math.abs(evt.deltaX) > 40 ? (evt.deltaX > 0 ? 'right' : 'left') : '';
-      const y = Math.abs(evt.deltaY) > 40 ? (evt.deltaY > 0 ? 'down' : 'up') : '';
-
-      console.log(this.eventText += `${x} ${y}<br/>`);
-  }
+   direction = ""; 
+  
+  onSwipe(event) { 
+ const x = 
+   Math.abs( 
+      event.deltaX) > 40 ? (event.deltaX > 0 ? "Right" : "Left") : ""; 
+ const y = 
+   Math.abs( 
+      event.deltaY) > 40 ? (event.deltaY > 0 ? "Down" : "Up") : ""; 
+    if(x=="Right"){
+        this.nextSeg();
+    } else if(x=="Left"){
+        this.prevSeg();
+    }
+  } 
 
    gotoList() {
       this.router.navigate(['/ConfiguracioPlaca']);

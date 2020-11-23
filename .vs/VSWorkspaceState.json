@@ -3,10 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\configuracio-placa",
     "\\src\\app\\seguidor-card",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\main.ts",
+  "SelectedNode": "\\src\\app\\app.component.css",
   "PreviewInSolutionExplorer": false
 }
