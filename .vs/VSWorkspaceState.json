@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e\\src",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\auth",
     "\\src\\app\\auth\\components",
-    "\\src\\app\\seguidor-card",
-    "\\src\\app\\shared",
-    "\\src\\app\\shared\\services"
+    "\\src\\app\\auth\\components\\login",
+    "\\src\\app\\calendar-card",
+    "\\src\\app\\configuracio-general",
+    "\\src\\app\\configuracio-placa",
+    "\\src\\app\\dades-generals",
+    "\\src\\app\\seguidor-card"
   ],
-  "SelectedNode": "\\src\\app\\shared\\services\\user.ts",
+  "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.html",
   "PreviewInSolutionExplorer": false
 }
