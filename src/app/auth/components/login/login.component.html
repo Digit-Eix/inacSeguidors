@@ -1,0 +1,22 @@
+<div class="login">
+  <form class="custom-form" method="post">
+    <input
+      type="text"
+      [(ngModel)]="email"
+      name="email"
+      placeholder="Usuario"
+      required="required"
+    />
+    <input
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      placeholder="Contraseña"
+      required="required"
+    />
+    <button type="submit" (click)="login()">Iniciar sesión</button>
+  </form>
+  <button (click)="logout()">Cerrar sesión</button>
+  <p>Usuari: prova@prova.com</p>
+  <p>Contrasenya: 123456789</p>
+</div>

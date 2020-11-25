@@ -10,6 +10,13 @@
     align-items: center;
   }
 
+  .posicioNum{
+    margin-left:-20%;
+  }
+  .posicioNum2{
+    margin-left:-5%;
+  }
+
 @media only screen and (max-width: 1219px) and (min-width: 807px) {
   .mida-lletra{
     
@@ -71,6 +78,13 @@
    margin-top:-7px;
  }
 
+ .posicioNum{
+    margin-left:0%;
+  }
+  .posicioNum2{
+    margin-left:0%;
+  }
+
 }
 
 @media only screen and (max-width: 356px) and (min-width: 100px){
@@ -95,6 +109,13 @@ mat-card{
 .imatge-alarma{
    margin-top:-7px;
  }
+
+ .posicioNum{
+    margin-left:0%;
+  }
+  .posicioNum2{
+    margin-left:0%;
+  }
 }
 
 

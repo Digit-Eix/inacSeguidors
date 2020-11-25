@@ -18,7 +18,7 @@ export class ConfiguracioGeneralComponent implements OnInit {
       fullscreenControl: false,
       mapTypeId: 'roadmap',
       zoomControl: false,
-      scrollwheel: false,
+      scrollwheel: true,
       disableDoubleClickZoom: false,
       maxZoom: 15,
       minZoom: 8,

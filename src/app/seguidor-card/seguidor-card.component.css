@@ -1,3 +1,5 @@
+
+
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -310,6 +312,11 @@ button.next {
   margin-top:-40%;
 }
 
+.imatge-petit{
+    width:24px;
+    height:auto;
+  }
+
 @media only screen and (max-width: 1219px) and (min-width: 807px){
 .seccio-informacio-general{
   height:135px;
@@ -495,8 +502,8 @@ button.next {
 }
 
 .number{
-  font-size:25px;
-  width:50%;
+  font-size:20px;
+  width:70%;
   margin-left:auto;
   margin-right:auto;
   text-align:right;
@@ -615,8 +622,8 @@ button.next {
 }
 
 .number{
-  font-size:25px;
-  width:50%;
+  font-size:20px;
+  width:70%;
   margin-left:auto;
   margin-right:auto;
   text-align:right;

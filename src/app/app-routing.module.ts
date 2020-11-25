@@ -6,7 +6,7 @@ import { ConfiguracioGeneralComponent } from '../app/configuracio-general/config
 
 
 const routes: Routes = [
-    { path: '', component: SeguidorCardComponent},
+    {path: '', component: SeguidorCardComponent},
     {path: 'ConfiguracioPlaca', component: ConfiguracioPlacaComponent},
     {path: 'ConfiguracioGeneral', component: ConfiguracioGeneralComponent}
 ];

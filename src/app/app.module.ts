@@ -22,7 +22,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ConfiguracioPlacaComponent } from './configuracio-placa/configuracio-placa.component';
 import { ConfiguracioGeneralComponent } from './configuracio-general/configuracio-general.component';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AuthModule } from './auth/auth.module';
+
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { AuthService } from "./shared/services/auth.service";
 
 import * as Hammer from 'hammerjs'; 
 import { HammerModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG}  
@@ -63,9 +70,14 @@ export class MyHammerConfig extends HammerGestureConfig {
     FormsModule,
     ReactiveFormsModule,
     GoogleMapsModule,
-    HammerModule 
+    HammerModule,
+    AuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   providers: [
+      AuthService,
       { 
           provide: HAMMER_GESTURE_CONFIG, 
           useClass: MyHammerConfig, 

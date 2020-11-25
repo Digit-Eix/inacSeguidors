@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { SharedService } from '../shared/shared.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AuthService } from "../shared/services/auth.service";
 
 @Component({
   selector: 'app-seguidor-card',
@@ -14,7 +15,6 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class SeguidorCardComponent implements OnInit {
   loading: boolean = true;
-  clickValue: number;
   seguidorField: SeguidorField = new SeguidorField();
   title  = 'Huerta Solar Ballesteros';
   temp: Seguidor = new Seguidor();
@@ -26,20 +26,23 @@ export class SeguidorCardComponent implements OnInit {
   seguidorDataUrl = './assets/seguidorData.json';
 
   //seguidorDataUrl = 'http://inac.digiteix.info/getSeguidorData.php';
-  // inici codi per mostrar el boto en Auto o Manual
-  // fa falta canviar-ho per a la detecció automatica de si esta en manual o automatic
+    
   seguidorEnviar: Seguidor;
   eventText = '';
+
+  // inici codi per mostrar el boto en Auto o Manual
   onClickMe() {
-    if (this.clickValue === 0){
-      this.clickValue = 1;
+    if (this.seguidorField.seguidors[this.segNum].manual == 1){
+      this.seguidorField.seguidors[this.segNum].manual = 0;
+      //fa falta modificar la dada al plc/servidor
     } else{
-      this.clickValue = 0;
+      this.seguidorField.seguidors[this.segNum].manual = 1;
+      //fa falta modificar la dada al plc/servidor
     }
-    console.log(this.clickValue);
   }
    // fi codi per mostrar el boto en Auto o Manual
 
+   // inici codi per detectar el moviment de sipe
    direction = ""; 
   
   onSwipe(event) { 
@@ -54,22 +57,38 @@ export class SeguidorCardComponent implements OnInit {
     } else if(x=="Left"){
         this.prevSeg();
     }
-  } 
+  }
+   // fi codi per detectar el moviment de sipe
 
+   // inici codi botons canvi de pantalla
    gotoList() {
+      if(this.authService.isLoggedIn !== true) {
+      this.router.navigate(['/login'])
+    }else{
       this.router.navigate(['/ConfiguracioPlaca']);
+    }     
    }
 
    gotoConfig(){
+      if(this.authService.isLoggedIn !== true) {
+      this.router.navigate(['/login'])
+    }else{
       this.router.navigate(['/ConfiguracioGeneral']);
+    }
    }
 
+   gotoLogin(){
+      this.router.navigate(['/login']);
+   }
+   // fi codi botons canvi de pantalla
+
+   // inici codi boto rescarregar dades
    restartDades(){
       this.ngOnInit();
    }
+   // fi codi boto rescarregar dades
 
-   constructor(private _http: HttpClient, private router: Router, private shared: SharedService) {
-    this.clickValue = 0;
+   constructor(private _http: HttpClient, private router: Router, private shared: SharedService, public authService: AuthService) {
    }
   ngOnInit() {
   this.loading = true;
