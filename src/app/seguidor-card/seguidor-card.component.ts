@@ -18,6 +18,7 @@ export class SeguidorCardComponent implements OnInit {
   seguidorField: SeguidorField = new SeguidorField();
   title  = 'Huerta Solar Ballesteros';
   temp: Seguidor = new Seguidor();
+  login_state: boolean = false;
   // rData: any = this.getSeguidorData();
   // rData: any = {};
   segNum: number;
@@ -60,10 +61,38 @@ export class SeguidorCardComponent implements OnInit {
   }
    // fi codi per detectar el moviment de sipe
 
+   // inici codi login
+
+  email: string;
+  password: string;
+  
+  login() {
+    this.authService.SignIn(this.email, this.password);
+    setTimeout(() => { this.checkUser() }, 1000);
+    
+  }
+
+  checkUser(){
+    const user = JSON.parse(localStorage.getItem('user'));
+    if(user !== null){
+        this.login_state=false;
+    }
+  }
+
+  logout(){
+    this.authService.SignOut();
+    this.login_state=false;
+  }
+
+  gotoMain(){
+    this.login_state=false;
+  }
+   // fi codi login
+   
    // inici codi botons canvi de pantalla
    gotoList() {
       if(this.authService.isLoggedIn !== true) {
-      this.router.navigate(['/login'])
+      this.login_state=true;
     }else{
       this.router.navigate(['/ConfiguracioPlaca']);
     }     
@@ -71,14 +100,14 @@ export class SeguidorCardComponent implements OnInit {
 
    gotoConfig(){
       if(this.authService.isLoggedIn !== true) {
-      this.router.navigate(['/login'])
+      this.login_state=true;
     }else{
       this.router.navigate(['/ConfiguracioGeneral']);
     }
    }
 
    gotoLogin(){
-      this.router.navigate(['/login']);
+      this.login_state=true;
    }
    // fi codi botons canvi de pantalla
 

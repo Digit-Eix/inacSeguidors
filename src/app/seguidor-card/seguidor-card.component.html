@@ -19,7 +19,36 @@
         </div>
     </mat-card-content>
 </mat-card>
-<mat-card *ngIf="loading == false"class="conenidor-body weather-card border rounded" style="margin-top:15px!important;">
+          <div class="login" *ngIf="login_state == true">
+            <form class="custom-form" method="post">
+              <input
+                type="text"
+                [(ngModel)]="email"
+                name="email"
+                placeholder="Usuario"
+                required="required"
+              />
+              <input
+                type="password"
+                [(ngModel)]="password"
+                name="password"
+                placeholder="Contraseña"
+                required="required"
+              />
+              <button type="submit" (click)="login()">Iniciar sesión</button>
+              <button class="boto_vermell"(click)="logout()" style="margin-top:10px;">Cerrar sesión</button>
+            </form>
+            <div style="width:100%; text-align:center; margin-top:15px;">
+                <button class="boto-petit2" (click)="gotoMain()"style="padding:0px!important;" mat-mat-icon-button mat-raised-button>
+                    <img style="height:24px!important; width:24px!important;" src="/assets/img/exit-icon-petit.png" />
+                </button>
+            </div>
+  <!--
+            <p>Usuari: prova@prova.com</p>
+            <p>Contrasenya: 123456789</p>
+  -->
+          </div>
+<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card border rounded" style="margin-top:15px!important;">
     <mat-card-content>
          <div class="seccio-informacio-general">
               <div class="div-secundari" style="min-width:100%!important; align:left; height:80px;">
@@ -35,23 +64,20 @@
                               <img src="/assets/img/menu-button_petit.png" />
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" (click)="gotoLogin()">Autentificar</a>
+                                <a class="dropdown-item" (click)="gotoLogin()">Cuenta</a>
                                 <a class="dropdown-item" (click)="restartDades()">Recargar datos</a>
                                 <a class="dropdown-item" (click)="gotoConfig()">Configuración</a>
                             </div>
                       </div>
                   </div>
               </div>
-              <div style="min-width:100%!important; align:left; height:auto;" >
+              <div style="min-width:100%!important; align:left; height:auto; margin-top:5px;" >
                   <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
               </div>
          </div>
-         <div class="seccio-informacio-seguidor">
-            
-         </div>
     </mat-card-content>
 </mat-card>
-<mat-card *ngIf="loading == false"class="conenidor-body weather-card border rounded" style="margin-top:15px!important;">
+<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card border rounded" style="margin-top:15px!important;">
     <mat-card-content>
         <div style="width:100%!important; display:flex; margin-top:10px; padding-top:10px;">
             <div style="width:24%; float:left; text-align:center; margin: 0px 0px;!important">

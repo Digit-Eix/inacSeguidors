@@ -1,4 +1,48 @@
+.custom-form {
+  min-width: 250px;
+  max-width: 600px;
+  width: 80%;
+  margin: 0px auto;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem 3rem;
+  margin: auto;
+  border-radius: 2.5rem;
+  background-color: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  color: black;
+  margin-top: 20px;
+}
+.custom-form input {
+  display: block;
+  margin: 0 0 2rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+      rgba(0, 0, 0, 0.1);
+  border: 0 none;
+  background: #ebf5fc;
+}
+.custom-form button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #8ADF73;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
+}
 
+.boto_vermell{
+background-color: #D02F2F!important;
+}
 
 .loader {
   border: 16px solid #f3f3f3;
@@ -434,7 +478,7 @@ button.next {
 
 @media only screen and (max-width: 548px) and (min-width: 357px){
 .seccio-informacio-general{
-  height:110px;
+  height:115px;
   display:in-line block;
   overflow:visible;
 }
@@ -655,6 +699,22 @@ button.next {
 
   .imatge-inclinada-1{
   margin-top:0%!important;
+}
+
+.custom-form button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.675rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #8ADF73;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
 }
 
 }

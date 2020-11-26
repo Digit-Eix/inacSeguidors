@@ -11,10 +11,17 @@
   }
 
   .posicioNum{
-    margin-left:-20%;
+    margin-left:-10%;
   }
   .posicioNum2{
     margin-left:-5%;
+  }
+
+  .titol{
+    text-align:center!important;
+  }
+  .titol2{
+    margin-left:12.5%!important;
   }
 
 @media only screen and (max-width: 1219px) and (min-width: 807px) {
@@ -85,6 +92,10 @@
     margin-left:0%;
   }
 
+  .titol2{
+    margin-left:0%!important;
+  }
+
 }
 
 @media only screen and (max-width: 356px) and (min-width: 100px){
@@ -115,6 +126,9 @@ mat-card{
   }
   .posicioNum2{
     margin-left:0%;
+  }
+  .titol2{
+    margin-left:0%!important;
   }
 }
 
