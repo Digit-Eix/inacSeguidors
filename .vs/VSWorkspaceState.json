@@ -3,14 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\auth\\components",
-    "\\src\\app\\auth\\components\\login",
     "\\src\\app\\calendar-card",
-    "\\src\\app\\configuracio-general",
-    "\\src\\app\\configuracio-placa",
-    "\\src\\app\\dades-generals",
-    "\\src\\app\\seguidor-card"
+    "\\src\\app\\seguidor-card",
+    "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.html",
+  "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.css",
   "PreviewInSolutionExplorer": false
 }

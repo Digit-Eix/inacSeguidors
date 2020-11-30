@@ -33,13 +33,17 @@ export class SeguidorCardComponent implements OnInit {
 
   // inici codi per mostrar el boto en Auto o Manual
   onClickMe() {
-    if (this.seguidorField.seguidors[this.segNum].manual == 1){
-      this.seguidorField.seguidors[this.segNum].manual = 0;
-      //fa falta modificar la dada al plc/servidor
-    } else{
-      this.seguidorField.seguidors[this.segNum].manual = 1;
-      //fa falta modificar la dada al plc/servidor
-    }
+      if(this.authService.isLoggedIn !== true) {
+          this.login_state=true;
+      }else{
+          if (this.seguidorField.seguidors[this.segNum].manual == 1){
+                this.seguidorField.seguidors[this.segNum].manual = 0;
+                //fa falta modificar la dada al plc/servidor
+          } else{
+                this.seguidorField.seguidors[this.segNum].manual = 1;
+                //fa falta modificar la dada al plc/servidor
+          }
+      }  
   }
    // fi codi per mostrar el boto en Auto o Manual
 
@@ -99,11 +103,7 @@ export class SeguidorCardComponent implements OnInit {
    }
 
    gotoConfig(){
-      if(this.authService.isLoggedIn !== true) {
-      this.login_state=true;
-    }else{
       this.router.navigate(['/ConfiguracioGeneral']);
-    }
    }
 
    gotoLogin(){

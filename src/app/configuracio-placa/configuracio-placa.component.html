@@ -1,15 +1,15 @@
 <mat-card class="contenidor-pagina">
     <div>
         <mat-card-header class="weather-header">
-            <div mat-card-avatar class="weather-header-icon" style="margin-top:-15px!important;">
-                <img src="/assets/img/logo-icon.png" alt="logo inac">
+            <div mat-card-avatar class="weather-header-icon">
+                <img style="margin-top:-25px!important;" src="/assets/img/logo-icon.png" alt="logo inac">
             </div>
             <mat-card-title style="margin-left:5px;">{{title}}</mat-card-title>
         </mat-card-header>
     </div>
 </mat-card>
 
-<mat-card class="weather-card" style="margin-top:15px!important; width:95%; margin-left:auto!important; margin-right:auto!important; padding-bottom:0px!important;">
+<mat-card class="weather-card shadow border rounded" style="margin-top:15px!important; width:95%; margin-left:auto!important; margin-right:auto!important; padding-bottom:0px!important;">
     <mat-card-content>
          <div class="contenidor-formulari">
               <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">              
@@ -17,7 +17,7 @@
                     
                         <h5>Configuración {{seguidorRebut.nom}}</h5>
                         <div style="width:100%; height:40px; margin:0px!important;">
-                          <div class="shadow border rounded" style="width:49%; height:30px;">
+                          <div class="shadow border rounded" style="width:49%; height:40px; display: flex; align-items: center;">
                             <div class="casella_dades contingut2" style="padding-top:5px;padding-bottom:5px;padding-left:10px;">
                                   Correción
                             </div>
@@ -139,8 +139,8 @@
                                                     </div>
                                               </div>
                                         </div>
-                                <div style="text-align:center;">        
-                                    <button class="button " style="margin:10px;" mat-mat-icon-button mat-raised-button type="submit">GUARDAR</button>
+                                <div class="" style="text-align:center;">        
+                                    <button class="button border rounded shadow" style="margin:10px;" mat-mat-icon-button mat-raised-button type="submit">GUARDAR</button>
                                 </div>
                           </div>
               </form>
