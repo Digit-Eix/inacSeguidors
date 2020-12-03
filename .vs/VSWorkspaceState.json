@@ -3,10 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\calendar-card",
     "\\src\\app\\seguidor-card",
+    "\\src\\app\\shared",
     "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\src\\app\\seguidor-card\\seguidor-card.component.css",
+  "SelectedNode": "\\src\\app\\shared\\services\\auth.service.ts",
   "PreviewInSolutionExplorer": false
 }

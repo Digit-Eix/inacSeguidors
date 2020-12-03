@@ -58,22 +58,29 @@ export class SeguidorCardComponent implements OnInit {
    Math.abs( 
       event.deltaY) > 40 ? (event.deltaY > 0 ? "Down" : "Up") : ""; 
     if(x=="Right"){
-        this.nextSeg();
-    } else if(x=="Left"){
         this.prevSeg();
+    } else if(x=="Left"){
+        this.nextSeg();
     }
   }
    // fi codi per detectar el moviment de sipe
 
    // inici codi login
 
+  dict = {
+      'MARQUIREBE' : 'marquirebe@marquirebe.com', 
+  };
+
   email: string;
   password: string;
   
   login() {
+    this.email = this.dict[this.email];
+    console.log(this.email);
     this.authService.SignIn(this.email, this.password);
     setTimeout(() => { this.checkUser() }, 1000);
-    
+    this.email = '';
+    this.password = '';    
   }
 
   checkUser(){

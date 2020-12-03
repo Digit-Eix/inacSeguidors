@@ -63,8 +63,8 @@ mat-card{
     font-weight: bolder;
 }
 mat-card{
-  padding-top:10px!important;
-  padding-bottom:10px!important;
+  padding-top:8px!important;
+  padding-bottom:8px!important;
   margin-left:0px!important;
 }
 }

@@ -3,7 +3,7 @@
     <div class="contenidor-header">
         <mat-card-header class="weather-header">
             <div mat-card-avatar class="weather-header-icon">
-                <img style="margin-top:-25px!important;" src="/assets/img/logo-icon.png" alt="logo inac">
+                <img style="margin-top:-35px!important;" src="/assets/img/logo-icon.png" alt="logo inac">
             </div>
             <mat-card-title style="margin-left:5px;">{{title}}</mat-card-title>
         </mat-card-header>
@@ -44,7 +44,7 @@
                 </button>
             </div>
           </div>
-<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card rounded" style="margin-top:15px!important;">
+<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card rounded shadow border" style="margin-top:15px!important;">
     <mat-card-content>
          <div class="seccio-informacio-general">
               <div class="div-secundari" style="min-width:100%!important; align:left; height:80px;">
@@ -67,13 +67,13 @@
                       </div>
                   </div>
               </div>
-              <div style="min-width:100%!important; align:left; height:auto; margin-top:5px;" >
+              <div style="min-width:100%!important; align:left; height:auto; margin-top:5px!important;" >
                   <app-dades-generals [seguidor]="seguidorField"></app-dades-generals>
               </div>
          </div>
     </mat-card-content>
 </mat-card>
-<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card rounded" style="margin-top:15px!important;">
+<mat-card *ngIf="loading == false && login_state == false"class="conenidor-body weather-card rounded shadow border" style="margin-top:15px!important;">
     <mat-card-content>
         <div style="width:100%!important; display:flex; margin-top:10px; padding-top:10px;">
             <div style="width:24%; float:left; text-align:center; margin: 0px 0px;!important">
