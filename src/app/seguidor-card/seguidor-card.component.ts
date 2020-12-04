@@ -76,7 +76,6 @@ export class SeguidorCardComponent implements OnInit {
   
   login() {
     this.email = this.dict[this.email];
-    console.log(this.email);
     this.authService.SignIn(this.email, this.password);
     setTimeout(() => { this.checkUser() }, 1000);
     this.email = '';

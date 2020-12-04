@@ -3,10 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\seguidor-card",
-    "\\src\\app\\shared",
+    "\\src\\app\\configuracio-general",
     "\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\src\\app\\shared\\services\\auth.service.ts",
+  "SelectedNode": "\\src\\app\\configuracio-general\\configuracio-general.component.ts",
   "PreviewInSolutionExplorer": false
 }

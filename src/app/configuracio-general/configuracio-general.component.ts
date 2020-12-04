@@ -45,12 +45,10 @@ export class ConfiguracioGeneralComponent implements OnInit {
   ngOnInit(): void {
       this.seguidorFieldRebut = this.shared.getDadesSegudiors();
       console.log(this.seguidorFieldRebut);
-      navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
         lat: parseFloat(this.seguidorFieldRebut.latitud+"000"),
         lng: parseFloat(this.seguidorFieldRebut.longitud+"000"),
       }
-    })
     this.addMarker();
   }
 
