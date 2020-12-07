@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 1219px) and (min-width: 807px) {
   .mida-lletra{
-    
+    font-size:12px!important;
   }
 }
 
@@ -64,7 +64,7 @@
   }
 }
 
-@media only screen and (max-width: 548px) and (min-width: 357px){
+@media only screen and (max-width: 548px) and (min-width: 390px){
 .mida-lletra{
     font-size:11px!important;
     font-weight: bolder;
@@ -98,14 +98,14 @@
 
 }
 
-@media only screen and (max-width: 356px) and (min-width: 100px){
+@media only screen and (max-width: 389px) and (min-width: 100px){
 .mida-lletra{
     font-size:9px!important;
     font-weight: bolder;
  }
 
  .mida-lletra-2{
-    font-size:12px!important;
+    font-size:9px!important;
  }
 
 .alerta-vent-img{

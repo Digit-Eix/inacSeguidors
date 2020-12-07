@@ -199,14 +199,14 @@
 }
 
 .casella_dades{
-   width:59%;
+   width:49%;
    float:left;
    margin:0px;
 }
 
 .input_dades{
-   width:39%;
-   float:left;
+   width:49%;
+   text-align:center;
    margin:0px;
 }
 
@@ -221,6 +221,7 @@
 
 .titol2{
    font-size:18px;
+   margin-bottom:2px!important;
 }
 
 .limites{
@@ -249,6 +250,7 @@
 
 .titol2{
    font-size:13px;
+   margin-bottom:2px!important;
 }
 
 .contingut2{

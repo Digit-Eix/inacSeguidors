@@ -20,7 +20,7 @@
                                     <div class="casella_dades contingut2" style="padding-top:5px;padding-bottom:5px;padding-left:10px;">
                                           Correción
                                     </div>
-                                    <input class="input_dades" type="number" style="margin-top:2px;"min="0" max="99"id="Limit_Orientacio_Maxim" formControlName="Limit_Orientacio_Maxim" name="Limit_Orientacio_Maxim" placeholder="0 - 99">
+                                    <input class="input_dades contingut2" type="number" style="margin-top:2px;"min="0" max="99"id="Limit_Orientacio_Maxim" formControlName="Limit_Orientacio_Maxim" name="Limit_Orientacio_Maxim" placeholder="0 - 99">
                               </div>
                               <span class="float-right border rounded shadow" style="margin-top:-70px">
                                     <button class="boto-petit" (click)="gotoList()"style="padding:0px!important;" mat-mat-icon-button mat-raised-button>
@@ -29,7 +29,7 @@
                               </span>
                         </div>
                     </div>
-                    <div class="contenidor2">
+                    <div class="contenidor2" style="margin-top:20px!important;">
                           <div class="contenidor2">
                                 <div class="titol">
                                       Orientación
@@ -95,8 +95,8 @@
                                                     </div>
                                               </div>
                                         </div>
-                                        <div class="subcontenidor2 card rounded border shadow m-auto align-content-center">                          
-                                              <div class="congingut">
+                                 <div class="subcontenidor2 card rounded border shadow m-auto align-content-center">                          
+                                       <div class="congingut">
                                                     <div class="limites">
                                                           <div class="titol2">
                                                                 Límites
@@ -111,8 +111,8 @@
                                                                       <input class="input_dades" type="number" id="Limit_Inclinacio_Minim" formControlName="Limit_Inclinacio_Minim" name="Limit_Inclinacio_Minim" placeholder="{{seguidorRebut.limitInclinacioMinim| number:'2.0-1'}}º">
                                                                 </div>
                                                           </div>
-                                                    </div>
-                                                    <div class="entradaAnalogica">
+                                       </div>
+                                       <div class="entradaAnalogica">
                                                           <div class="titol2">
                                                                 Entrada Analógica
                                                           </div>
@@ -126,8 +126,8 @@
                                                                       <input class="input_dades" type="number" id="Entrada_Min_Incl" formControlName="Entrada_Min_Incl" name="Entrada_Min_Incl" placeholder="{{seguidorRebut.entradaMinInclinacio}}">
                                                                 </div>
                                                           </div>
-                                                    </div>
-                                                    <div class="salidaEscalada">
+                                       </div>
+                                       <div class="salidaEscalada">
                                                           <div class="titol2">
                                                                 Salida Escalada
                                                           </div>
@@ -141,12 +141,12 @@
                                                                       <input class="input_dades" type="number" id="Sortida_Min_Incl" formControlName="Sortida_Min_Incl" name="Sortida_Min_Incl" placeholder="{{seguidorRebut.sortidaMinInclinacio}}º">
                                                                 </div>
                                                           </div>
-                                                    </div>
-                                              </div>
-                                        </div>
-                                <div class="border rounded shadow" style="text-align:center;">        
+                                       </div>
+                                 </div>
+                          </div>
+                          <div class="" style="text-align:center;">        
                                     <button class="button border rounded shadow" style="margin:10px;" mat-mat-icon-button mat-raised-button type="submit">GUARDAR</button>
-                                </div>
+                          </div>
                     </div>
               </form>
          </div>

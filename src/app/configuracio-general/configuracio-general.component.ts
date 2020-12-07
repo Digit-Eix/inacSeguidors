@@ -49,6 +49,7 @@ export class ConfiguracioGeneralComponent implements OnInit {
         lat: parseFloat(this.seguidorFieldRebut.latitud+"000"),
         lng: parseFloat(this.seguidorFieldRebut.longitud+"000"),
       }
+      console.log(this.center);
     this.addMarker();
   }
 

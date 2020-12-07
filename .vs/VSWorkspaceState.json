@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\configuracio-general",
-    "\\src\\app\\shared\\services"
+    "\\src\\app\\configuracio-general"
   ],
-  "SelectedNode": "\\src\\app\\configuracio-general\\configuracio-general.component.ts",
+  "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false
 }
