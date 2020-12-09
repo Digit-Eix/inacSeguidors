@@ -153,6 +153,8 @@ button.next {
     color: #fff;
     z-index: 2;
     position: relative;
+    font-weight: bold!important;
+    font-size: 20px!important;
 }
 
 .weather-header mat-card-subtitle {
@@ -360,6 +362,14 @@ button.next {
     width:24px;
     height:auto;
   }
+
+
+.titol_pagina{
+    color: white;
+    font-size:30px;
+    z-index:5;
+    margin-left:-10px;
+}
 
 @media only screen and (max-width: 1219px) and (min-width: 807px){
 .seccio-informacio-general{
@@ -578,6 +588,14 @@ button.next {
     height:36px!important;
   }
 
+
+.titol_pagina{
+    color: white;
+    font-size:22px;
+    z-index:5;
+    margin-left:-10px;
+}
+
 }
 
 @media only screen and (max-width: 356px) and (min-width: 100px){
@@ -715,6 +733,13 @@ button.next {
   border-radius: 1.5rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
+}
+
+.titol_pagina{
+    color: white;
+    font-size:20px;
+    z-index:5;
+    margin-left:-10px;
 }
 
 }
